@@ -13,8 +13,24 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
+/*Route::get('/', function () {
     return view('welcome');
+});*/
+
+Route::get('/', function () {
+    return view('index');
+});
+
+Route::get('/quemsomos', function () {
+    return view('mais.quemsomos');
+});
+
+Route::get('/oquefazemos', function () {
+    return view('mais.oquefazemos');
+});
+
+Route::get('/contacto', function () {
+    return view('mais.contacto');
 });
 
 Auth::routes();
