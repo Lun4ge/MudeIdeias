@@ -13,11 +13,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-/*Route::get('/', function () {
-    return view('welcome');
-});*/
-
 Route::get('/', function () {
+    return view('welcome');
+});
+
+Route::get('/mudedideias', function () {
     return view('index');
 });
 
@@ -31,6 +31,10 @@ Route::get('/oquefazemos', function () {
 
 Route::get('/contacto', function () {
     return view('mais.contacto');
+});
+
+Route::get('/ondeEstamos', function () {
+    return view('mais.ondeEstamos');
 });
 
 Auth::routes();
