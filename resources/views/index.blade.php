@@ -11,7 +11,7 @@
     <title>Mudedideias</title>
   </head>
   <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar navbar-expand-lg navbar-light">
       <div class="container">
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav mr-auto">
@@ -20,8 +20,8 @@
                 margin-top: 10%;
               }
             </style>
-            <img src="images/logo.jpg" alt="logo" height="60"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <img src="images/20anos.jpeg" class="imagem" alt="20anos" height="25">
+            <img src="images/logo.png" alt="logo" height="60"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <img src="images/20anos.png" class="imagem" alt="20anos" height="25">
           </ul>
         </div>
         <ul class="navbar-nav ml-auto">
@@ -36,6 +36,7 @@
                             <a href="/quemsomos" class="w3-bar-item w3-button">QUEM SOMOS</a>
                             <a href="/oquefazemos" class="w3-bar-item w3-button">O QUE FAZEMOS</a>
                             <a href="/contacto" class="w3-bar-item w3-button">CONTACTO</a>
+                            <a href="/ondeEstamos" class="w3-bar-item w3-button">ONDE ESTAMOS</a>
                         </div>
                     </div>
                 </div>
@@ -48,42 +49,47 @@
     <img src="images/inicial.jpg" alt="incio" width="100%" height="auto">
     <style>
       .margem {
-        padding-left: 10px;
-    }
+        padding-left: 5px;
+      }
+      .tamanho {
+        width: 160px;
+        height: 160px;
+      }
     </style>
+
     <div class="row">
-      <div class="col-sm 2"></div>
+      <div class="col-sm 1"></div>
       <div class="col-md 1">
-        <img src="images/identidadeVisual.png" alt="identidadeVisual" width="130" height="130"><br>
-        <center><h6><font color="grey">IDENTIDADE VISUAL</h6></font></center>
+        <center><img src="images/identidadeVisual.png" class="tamanho" onmouseover="this.src='images/circuloCinza.png'" onmouseout="this.src='images/identidadeVisual.png'" alt="identidadeVisual"><br><br>
+        <h6><font color="grey">IDENTIDADE VISUAL</h6></font></center>
       </div>
       <div class="col-sm 1">
-        <img src="images/viaturas.png" alt="viaturas" width="130" height="130"><br>
-        <center><font color="grey"><h6>VIATURAS</h6></font></center>
+        <center><img src="images/viaturas.png" class="tamanho" alt="viaturas" onmouseover="this.src='images/circuloCinza.png'" onmouseout="this.src='images/viaturas.png'"><br><br>
+        <font color="grey"><h6>VIATURAS</h6></font></center>
       </div>
       <div class="col-sm 1">
-        <img src="images/montras.png" alt="montras" width="130" height="130"><br>
-        <center><font color="grey"><h6>MONTRAS</h6></font></center>
+        <center><img src="images/montras.png" class="tamanho" alt="montras" onmouseover="this.src='images/circuloCinza.png'" onmouseout="this.src='images/montras.png'"><br><br>
+        <font color="grey"><h6>MONTRAS</h6></font></center>
       </div>
       <div class="col-sm 1">
-        <img src="images/lonas.png" alt="lonas" width="130" height="130"><br>
-        <center><font color="grey"><h6>LONAS/EXPOSITORES</h6></font></center>
+        <center><img src="images/lonas.png" class="tamanho" alt="lonas" onmouseover="this.src='images/circuloCinza.png'" onmouseout="this.src='images/lonas.png'"><br><br>
+        <font color="grey"><h6>LONAS/EXPOSITORES</h6></font></center>
       </div>
       <div class="col-sm 1">
-        <img src="images/placasReclamos.png" alt="placasReclamos" width="130" height="130"><br>
-        <center><font color="grey"><h6>PLACAS/RECLAMOS</h6></font></center>
+        <center><img src="images/placasReclamos.png" class="tamanho" alt="placasReclamos" onmouseover="this.src='images/circuloCinza.png'" onmouseout="this.src='images/placasReclamos.png'"><br><br>
+        <font color="grey"><h6>PLACAS/RECLAMOS</h6></font></center>
       </div>
       <div class="col-sm 1">
-        <img src="images/sinaletica.png" alt="sinaletica" width="130" height="130"><br>
-        <center><font color="grey"><h6>SINALÉTICA</h6>/font></center>
+        <center><img src="images/sinaletica.png" class="tamanho" alt="sinaletica" onmouseover="this.src='images/circuloCinza.png'" onmouseout="this.src='images/sinaletica.png'"><br><br>
+        <font color="grey"><h6>SINALÉTICA</h6></font></center>
       </div>
       <div class="col-sm 1">
-        <img src="images/texteis.png" alt="texteis" width="130" height="130"><br>
-        <center><font color="grey"><h6>TEXTEIS</h6></font></center>
+        <center><img src="images/texteis.png" class="tamanho" alt="texteis" onmouseover="this.src='images/circuloCinza.png'" onmouseout="this.src='images/texteis.png'"><br><br>
+        <font color="grey"><h6>TEXTEIS</h6></font></center>
       </div>
       <div class="col-sm 1">
-        <img src="images/bandeiras.png" alt="bandeiras" width="130" height="130"><br>
-        <center><font color="grey"><h6>BANDEIRAS</h6></font></center>
+        <center><img src="images/bandeiras.png" class="tamanho" alt="bandeiras" onmouseover="this.src='images/circuloCinza.png'" onmouseout="this.src='images/bandeiras.png'"><br><br>
+        <font color="grey"><h6>BANDEIRAS</h6></font></center>
       </div>
       <div class="col-sm 2"></div>
     </div>
@@ -97,12 +103,21 @@
           text-align: left;
         }
     </style>
+    <br>
     <div class="footer">
+      <br>
+      <style>
+        .redesSociais{
+          float: right;    
+          margin: 0 0 0 15px;
+        }
+      </style>
         <div class="container">
             <br>
-            <p>(+351) 91 405 94 72 <br> (+351) 243 581 581</p>
-            <p>geral@mudedideias.com <br> mudedideias@gmail.com</p>
-            <p>Zona Industrial - Lote 14 B <br> 2125 - 363 Muge</p>
+            <p><img src="images/telefone.png" alt="telefone" height="30">&nbsp;&nbsp;(+351) 91 405 94 72 <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (+351) 243 581 581</p> 
+            <img src="images/redesSociais.png" alt="redesSociais" class="redesSociais" height="30">
+            <p><img src="images/correio.png" alt="correio" height="30">&nbsp;&nbsp;geral@mudedideias.com <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; mudedideias@gmail.com</p>
+            <p><img src="images/localizacao.png" alt="localizacao" height="30">&nbsp;&nbsp;Zona Industrial - Lote 14 B <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2125 - 363 Muge</p>
             <br><br>
         </div>
     </div>
