@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 use App\Marcas;
 use App\Portfolios;
 
+use function GuzzleHttp\Promise\all;
+
 class backOffice extends Controller
 {
     public function index()
@@ -47,13 +49,9 @@ class backOffice extends Controller
     //////////////////////Imagens//////////////////////////
 
     public function ImagemIndex()
-    {
-      return view('admin.adicionar.imagens.imagensView');
-    }
-
-    public function ImagemCreate()
-    {
-      return view('admin.adicionar.imagens.imagensCreate');
+    {       
+      $all = Portfolios::select()->get();
+      return view('admin.adicionar.imagens.imagensView')->with(compact("all"));
     }
 
     public function ImagemStore(Request $request)
@@ -73,7 +71,7 @@ class backOffice extends Controller
         $imagens->tipo=$data['tipo'];
         $img = $request->file('imagem');
         $imgname = time().'.'. $img->getClientOriginalExtension();
-        $path = public_path('/imagens/portfolio');
+        $path = public_path('/portfolio');
         $img->move($path,$imgname);
         $imagens->imagem=$imgname;
         $imagens->save();
@@ -83,7 +81,10 @@ class backOffice extends Controller
 
     public function ImagemDestroy($id)
     {
-      
+           $all=Portfolios::where(['id'=>$id])->first();
+           unlink(public_path() .  '/portfolio/' . $all->imagem);
+           Portfolios::where(['id'=>$id])->delete();
+           return redirect('/imagens');
     }
 
     //////////////////////////////////////////////////////
@@ -165,7 +166,8 @@ class backOffice extends Controller
    
        public function MarcaDestroy($id)
        {
-         
+        Marcas::where(['id'=>$id])->delete();
+        return redirect('/marcas');
        }
    
     /////////////////////////////////////////////////////

@@ -35,12 +35,12 @@ Route::get('/administracao', 'backOffice@index')->name('Administração');
    
     // Route::group(['middleware' => ['admin']], function () {
       Route::get('marcas', 'backOffice@MarcaIndex');
-      Route::get('marcas/criar', 'backOffice@MarcaCreate');
       Route::post('marcas/criar', 'backOffice@MarcaStore');
+      Route::delete('marcas/{id}', 'backOffice@MarcaDestroy');
 
       Route::get('imagens', 'backOffice@ImagemIndex');
-      Route::get('imagens/criar', 'backOffice@ImagemCreate');
       Route::post('imagens/criar', 'backOffice@ImagemStore');
+      Route::delete('imagens/{id}', 'backOffice@ImagemDestroy');
 
       Route::get('mensagens', 'backOffice@MensagemIndex');
 
