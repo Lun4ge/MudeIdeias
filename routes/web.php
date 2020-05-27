@@ -2,6 +2,10 @@
 
 use Illuminate\Support\Facades\Route;
 
+// Route::get('/', function () {
+//     return view('welcome');
+// });
+
 Route::get('/', function () {
     return view('index');
 });
@@ -14,17 +18,22 @@ Route::get('/oquefazemos', function () {
     return view('mais.oquefazemos');
 });
 
-Route::get('/contacto', function () {
-    return view('mais.contacto');
+Route::get('/contacto','backOffice@contacto');
+
+Route::get('/ondeEstamos', function () {
+    return view('mais.ondeEstamos');
 });
 
+Route::get('home', 'backOffice@home');
 Auth::routes();
-Route::get('/administracao', 'backOffice@index')->name('Administração');
+Route::post('mensagens/criar', 'backOffice@MensagemStore');
 
-// Route::group(['middleware' => ['auth']], function(){
-    // Route::resource('', '');
-   
-    // Route::group(['middleware' => ['admin']], function () {
+Route::group(['middleware' => ['auth']], function(){
+    // Route::get('/administracao', 'backOffice@index')->name('Administração');
+
+    Route::group(['middleware' => ['admin']], function () {
+        Route::get('/administracao', 'backOffice@index')->name('Administração');
+
       Route::get('marcas', 'backOffice@MarcaIndex');
       Route::post('marcas/criar', 'backOffice@MarcaStore');
       Route::delete('marcas/{id}', 'backOffice@MarcaDestroy');
@@ -34,10 +43,11 @@ Route::get('/administracao', 'backOffice@index')->name('Administração');
       Route::delete('imagens/{id}', 'backOffice@ImagemDestroy');
 
       Route::get('mensagens', 'backOffice@MensagemIndex');
+      Route::delete('mensagens/{id}', 'backOffice@MensagemDestroy');
 
       Route::get('pedidos', 'backOffice@PedidoIndex');
 
       Route::get('enviados', 'backOffice@EnviadoIndex');
 
-    // });
-//   });
+    });
+  });
