@@ -1,0 +1,16 @@
+.margem {
+  margin-top: 1%;
+  margin-left: 15%;
+}
+.linha {
+  border-left: 1px solid #c0d80f;
+  height: 650px;
+}
+.linhaPequena {
+  border-left: 1px solid #c0d80f;
+  height: 300px;
+}
+.imagem{
+  margin-top: 2%;
+  margin-left: 4%;
+}

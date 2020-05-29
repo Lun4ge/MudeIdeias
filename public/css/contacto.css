@@ -1,0 +1,49 @@
+.margem {
+  margin-left: 15%;
+}
+.linha {
+  border-left: 1px solid #c0d80f;
+  height: 650px;
+}
+.imagem{
+  margin-top: 2%;
+  margin-left: 4%;
+}
+.margem2{
+  margin-left: 22%;;
+}
+.margem3{
+  margin-left: 25%;;
+}
+hr{
+  margin: 50%;
+}
+.tamanhoInput1 {
+  width: 60%; 
+  height: 7%;
+  border: 1px solid black;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+.tamanhoInput2 {
+  width: 60%;
+  height: 7%;
+  border: 1px solid black;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+.tamanhoInput3 {
+  width: 60%;
+  border: 1px solid black;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+.botao{
+  margin-left: 48%;
+  background-color: #c0d80f;
+  color: white;
+  text-align: center;
+  padding: 1% 3%;
+  border: 1px solid;
+  border-radius: 4px;
+}
