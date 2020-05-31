@@ -7,6 +7,7 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="{{asset('css/index.css')}}">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <title>Mudedideias</title>
   </head>
@@ -15,11 +16,6 @@
       <div class="container">
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav mr-auto">
-            <style>
-              .imagem { 
-                margin-top: 10%;
-              }
-            </style>
             <img src="images/logo.png" alt="logo" height="60"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <img src="images/20anos.png" class="imagem" alt="20anos" height="25">
           </ul>
@@ -43,20 +39,10 @@
             </div>
           </ul>
       </div>
-        </div>
-      </nav>
-
+    </div>
+    </nav>
     <img src="images/inicial.jpg" alt="incio" width="100%" height="auto">
-    <style>
-      .margem {
-        padding-left: 5px;
-      }
-      .tamanho {
-        width: 160px;
-        height: 160px;
-      }
-    </style>
-
+    {{--<img src="images/balao.png" alt="balao" class="zoom" align="fixed">--}}
     <div class="row">
       <div class="col-sm 1"></div>
       <div class="col-md 1">
@@ -93,25 +79,9 @@
       </div>
       <div class="col-sm 2"></div>
     </div>
-    <style>
-        .footer { 
-          left: 0;
-          bottom: 0;
-          width: 100%;
-          background-color: #c0d80f;
-          color: black;
-          text-align: left;
-        }
-    </style>
     <br>
     <div class="footer">
       <br>
-      <style>
-        .redesSociais{
-          float: right;    
-          margin: 0 0 0 15px;
-        }
-      </style>
         <div class="container">
             <br>
             <p><img src="images/telefone.png" alt="telefone" height="30">&nbsp;&nbsp;(+351) 91 405 94 72 <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (+351) 243 581 581</p> 

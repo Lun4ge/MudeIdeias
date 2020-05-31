@@ -7,110 +7,51 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-
+    <link rel="stylesheet" href="{{asset('css/contacto.css')}}">
     <title>Contacto</title>
   </head>
   <body>
-    <style>
-      .margem {
-        margin-top: 25px;
-        margin-left: 110px;
-      }
-      .linha {
-        border-left: 1px solid #c0d80f;
-        height: 650px;
-      }
-      .imagem{
-        margin-top: 50px;
-        margin-left: 80px;
-      }
-      .h6{
-        margin-left: 400px;
-      }
-      form{
-        margin-left: 350px;
-      }
-    </style>
-    <body>
-      <a href="/"><img src="images/logo.png" class="imagem" alt="logo" height="90"></a>
+    <a href="/"><img src="images/logo.png" class="imagem" alt="logo" height="90"></a>
+    <section>
       <br><br><br>
-      <div class="container-fluid; margem">
+      <div class="container; margem">
         <div class="row">
           <div class="col-md-8">
-            <h6 class="h6">
+            <h6 class="margem2">
               <img src="images/telefone.png" alt="telefone" height="30">&nbsp;&nbsp;(+351) 91 405 94 72 <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (+351) 243 581 581 <br><br>
               <img src="images/correio.png" alt="correio" height="30">&nbsp;&nbsp;geral@mudedideias.com <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; mudedideias@gmail.com <br><br>
               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Segunda a Sexta-Feira das <strong>9h00</strong> às <strong>13h00</strong> | <strong>14h30</strong> às <strong>18h30</strong>
-            </h6><br><br>
-            <div class="container">
-              <style>
-                .tamanhoInput1 {
-                  padding: 3px 220px;
-                  border: 1px solid #ccc;
-                  border-radius: 4px;
-                  box-sizing: border-box;
-                }
-                .tamanhoInput2 {
-                  padding: 3px 220px;
-                  border: 1px solid #ccc;
-                  border-radius: 4px;
-                  box-sizing: border-box;
-                }
-                .tamanhoInput3 {
-                  padding: 3px 230px;
-                  border: 1px solid #ccc;
-                  border-radius: 4px;
-                  box-sizing: border-box;
-                }
-                .botao{
-                  background-color: #c0d80f;
-                  color: black;
-                  padding: 15px 32px;
-                  text-align: center;
-                  padding: 10px 20px;
-                  border: 1px solid lightslategrey;
-                  border-radius: 4px;
-                }
-              </style>
-
-
-              <form method="POST" action="{{url('mensagens/criar')}}" enctype="multipart/form-data"> 
-                @csrf
+            </h6>
+            <center><hr style="height:1px;color:#c0d80f;background-color:#c0d80f" width="55%"></center>
+            <div class="container; margem3">
+              <form>
+                <h3>PODEMOS AJUDAR</h3>
                 <div class="form-group">  
-                  <h6><label for="exampleInputEmail1">Nome:</label></h6>
-                  <input type="text" class="form-control; tamanhoInput1" id="Nome" name="Nome" aria-describedby="NomeVerdadeiro">
-                  <h6><label for="tituloMensagem">Email:</label></h6>
-                  <input type="text" class="form-control; tamanhoInput2" id="Email" name="Email">
-                  <h6><label for="tituloMensagem">Titulo da Mensagem:</label></h6>
-                  <input type="text" class="form-control; tamanhoInput2" id="tituloMensagem" name="tituloMensagem">
-                  <h6><label for="Mensagem">Mensagem:</label></h6>
-                  <textarea  rows="4" class="form-control; tamanhoInput3" name="Mensagem" id="Mensagem"></textarea>
+                  {{--<h6><label for="exampleInputEmail1">Nome:</label></h6>--}}
+                  <h5><input type="text" class="tamanhoInput1" id="Nome" placeholder="Nome"></h5>
                 </div>
-                <input type="submit" class="botao" value="Enviar Mensagem">
+                <div class="form-group">
+                  {{--<h6><label for="tituloMensagem">Titulo da Mensagem:</label></h6>--}}
+                  <h5><input type="text" class="tamanhoInput2" id="tituloMensagem" placeholder="Titulo da Mensagem"></h5>
+                </div>
+                <div class="form-group">
+                  {{--<h6><label for="Mensagem">Mensagem:</label></h6>--}}
+                  <h5><textarea id="w3mission" rows="5" class="tamanhoInput3" id="Mensagem" placeholder="Mensagem"></textarea></h5>
+                </div>
+                <button type="submit" class="botao">Enviar</button>
               </form>
-
-
             </div>
-            <br><br><br>
-            <a href="javascript:javascript:history.go(-1)"><img src="images/voltar.png" alt="voltar" height="50"></a><font style="color:black">&nbsp;&nbsp;Voltar</font>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <a href="/mudedideias"><img src="images/inicio.png" alt="inicio" height="60"></a><font style="color:black">&nbsp;&nbsp;Inicio</font>
           </div>
           <div class="col-md-1; linha"></div>
           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
           <div class="col-md-2">
-            <br><br><br><br>
-            <a href="/quemsomos"><font style="color:black" size="6">QUEM SOMOS</a></font> <br><br>
-            <a href="/oquefazemos"><font style="color:black" size="6">O QUE FAZEMOS</a></font> <br><br>
-            <a href="/contacto"><font style="color:black" size="6"><strong>CONTACTO</a></strong></font> <br><br>
-            <a href="/ondeEstamos"><font style="color:black" size="6">ONDE ESTAMOS</a></font>
-            <br><br><br><br>
-            <img src="images/redesSociais.png" alt="redes sociais" height="20"> <br><br><br>
-            <img src="images/20anos.png" alt="20 anos" height="50">
-          </div>  
+            @include('layouts/menuMais')
+          </div>
         </div>
       </div>
+    </section>
+    @include('layouts/footer')
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->

@@ -20,7 +20,10 @@ Route::get('/ondeEstamos', function () {
     return view('mais.ondeEstamos');
 });
 
-Route::get('home', 'backOffice@home');
+Route::get('/ondeEstamos', function () {
+    return view('mais.ondeEstamos');
+});
+
 Auth::routes();
 Route::post('mensagens/criar', 'backOffice@MensagemStore');
 
