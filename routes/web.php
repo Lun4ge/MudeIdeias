@@ -2,10 +2,6 @@
 
 use Illuminate\Support\Facades\Route;
 
-// Route::get('/', function () {
-//     return view('welcome');
-// });
-
 Route::get('/', function () {
     return view('index');
 });
@@ -29,10 +25,9 @@ Auth::routes();
 Route::post('mensagens/criar', 'backOffice@MensagemStore');
 
 Route::group(['middleware' => ['auth']], function(){
-    // Route::get('/administracao', 'backOffice@index')->name('Administração');
 
     Route::group(['middleware' => ['admin']], function () {
-        Route::get('/administracao', 'backOffice@index')->name('Administração');
+        Route::get('/administracao', 'backOffice@MensagemIndex')->name('Administração');
 
       Route::get('marcas', 'backOffice@MarcaIndex');
       Route::post('marcas/criar', 'backOffice@MarcaStore');

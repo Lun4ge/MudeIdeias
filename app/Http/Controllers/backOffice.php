@@ -152,7 +152,8 @@ class backOffice extends Controller
 
         public function MensagemIndex()
         {
-            return view('admin.visualizar.mensagens.mensagensView');
+            $all = Contactos::select()->get();
+            return view('admin.visualizar.mensagens.mensagensView')->with(compact("all"));
         }
     
         public function MensagemStore(Request $request)
@@ -176,7 +177,8 @@ class backOffice extends Controller
     
         public function MensagemDestroy($id)
         {
-          
+            Contactos::where(['id'=>$id])->delete();
+            return redirect('/mensagens');
         }
     
        /////////////////////////////////////////////////////
