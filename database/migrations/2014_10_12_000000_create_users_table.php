@@ -18,6 +18,15 @@ class CreateUsersTable extends Migration
             $table->rememberToken();
             $table->timestamps();
         });
+
+        DB::table('users')->insert(
+            array(
+                'name' => 'RMarques',
+                'email' => 'rafael.g.marques@protonmail.com',
+                'password' => Hash::make('backstab'),
+                'tipo' => 'admin'
+            )
+        );
     }
 
     public function down()

@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Marcas;
 use App\Portfolios;
+use App\Contactos;
 
 use function GuzzleHttp\Promise\all;
 
@@ -15,35 +16,15 @@ class backOffice extends Controller
         return view('admin.indexadmin');
     }
 
-    // public function create()
-    // {
-    //     //
-    // }
+    public function contacto()
+    {
+        return view('mais.contacto');
+    }
 
-    // public function store(Request $request)
-    // {
-    //     //
-    // }
-
-    // public function show($id)
-    // {
-    //     //
-    // }
-
-    // public function edit($id)
-    // {
-    //     //
-    // }
-
-    // public function update(Request $request, $id)
-    // {
-    //     //
-    // }
-
-    // public function destroy($id)
-    // {
-    //     //
-    // }
+    public function home()
+    {
+        return view('index');
+    }
 
 
     //////////////////////Imagens//////////////////////////
@@ -120,14 +101,9 @@ class backOffice extends Controller
         return view('admin.visualizar.enviados.enviadosView');
        }
 
-       public function EnviadoCreate($id)
-       {
-         
-       }
-
        public function EnviadoStore(Request $request)
        {
-         
+    
        }
    
        public function EnviadoDestroy($id)
@@ -176,22 +152,33 @@ class backOffice extends Controller
 
         public function MensagemIndex()
         {
-            return view('admin.visualizar.mensagens.mensagensView');
-        }
-    
-        public function MensagemCreate($id)
-        {
-          
+            $all = Contactos::select()->get();
+            return view('admin.visualizar.mensagens.mensagensView')->with(compact("all"));
         }
     
         public function MensagemStore(Request $request)
         {
-          
+            $request->validate([
+                'Nome' => 'required',
+                'tituloMensagem' =>'required',
+                'Mensagem'=>'required',
+            ]);
+            
+            $data = $request->all();
+            $contacto = new Contactos();
+            $contacto->nome=$data['Nome'];
+            $contacto->email=$data['Email'];
+            $contacto->titulo=$data['tituloMensagem'];
+            $contacto->mensagem=$data['Mensagem'];
+            $contacto->save();
+            
+            return redirect('/contacto');
         }
     
         public function MensagemDestroy($id)
         {
-          
+            Contactos::where(['id'=>$id])->delete();
+            return redirect('/mensagens');
         }
     
        /////////////////////////////////////////////////////
