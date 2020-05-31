@@ -7,30 +7,12 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-
+    <link rel="stylesheet" href="{{asset('css/oquefazemos.css')}}">
     <title>O Que Fazemos</title>
   </head>
   <body>
-    <style>
-      .margem {
-        margin-top: 50px;
-        margin-left: 110px;
-      }
-      .linha {
-        border-left: 1px solid #c0d80f;
-        height: 650px;
-      }
-      .linhaPequena {
-        border-left: 1px solid #c0d80f;
-        height: 300px;
-      }
-      .imagem{
-        margin-top: 50px;
-        margin-left: 80px;
-      }
-    </style>
-    <body>
-      <a href="/mudedideias"><img src="images/logo.png" class="imagem" alt="logo" height="90"></a>
+    <a href="/"><img src="images/logo.png" class="imagem" alt="logo" height="90"></a>
+    <section>
       <br><br>
       <div class="container-fluid; margem">
         <div class="row">
@@ -86,26 +68,17 @@
                 &bull; Tipo Pena <br> &bull; Tipo Gota <br> &bull; Normais standart <br> &bull; Pendões
               </div>
             </div>
-           
-            <a href="javascript:javascript:history.go(-1)"><img src="images/voltar.png" alt="voltar" height="50"></a><font style="color:black">&nbsp;&nbsp;Voltar</font>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <a href="/mudedideias"><img src="images/inicio.png" alt="inicio" height="60"></a><font style="color:black">&nbsp;&nbsp;Inicio</font>
           </div>
           <div class="col-md-1; linha"></div>
           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
           <div class="col-md-2">
-            <br><br><br><br>
-            <a href="/quemsomos"><font style="color:black" size="6">QUEM SOMOS</a></font> <br><br>
-            <a href="/oquefazemos"><font style="color:black" size="6"><strong>O QUE FAZEMOS</a></font></strong> <br><br>
-            <a href="/contacto"><font style="color:black" size="6">CONTACTO</a></font> <br><br>
-            <a href="/ondeEstamos"><font style="color:black" size="6">ONDE ESTAMOS</a></font>
-            <br><br><br><br>
-          <img src="images/redesSociais.png" alt="redes sociais" height="20"> <br><br><br>
-          <img src="images/20anos.png" alt="20 anos" height="50">
-          </div>  
+            @include('layouts/menuMais')
+          </div>
         </div>
       </div>
+    </section>
+    @include('layouts/footer')
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
