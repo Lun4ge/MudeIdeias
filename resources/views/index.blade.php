@@ -47,7 +47,7 @@
       <div class="col-sm 1"></div>
       <div class="col-md 1">
         <center><img src="images/identidadeVisual.png" class="tamanho" onmouseover="this.src='images/circuloCinza.png'" onmouseout="this.src='images/identidadeVisual.png'" alt="identidadeVisual"><br><br>
-        <h6><font color="grey">IDENTIDADE VISUAL</h6></font></center>
+        <font color="grey"><h6>IDENTIDADE VISUAL</h6></font></center>
       </div>
       <div class="col-sm 1">
         <center><img src="images/viaturas.png" class="tamanho" alt="viaturas" onmouseover="this.src='images/circuloCinza.png'" onmouseout="this.src='images/viaturas.png'"><br><br>
