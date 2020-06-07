@@ -27,6 +27,15 @@ class CreateUsersTable extends Migration
                 'tipo' => 'admin'
             )
         );
+
+        DB::table('users')->insert(
+            array(
+                'name' => 'MGoncalves',
+                'email' => 'miguelgoncslves0212@gmail.com',
+                'password' => Hash::make('jerofanes.646'),
+                'tipo' => 'admin'
+            )
+        );
     }
 
     public function down()

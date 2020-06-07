@@ -1,11 +1,8 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="{{asset('css/index.css')}}">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
@@ -33,6 +30,10 @@
                             <a href="/oquefazemos" class="w3-bar-item w3-button">O QUE FAZEMOS</a>
                             <a href="/contacto" class="w3-bar-item w3-button">CONTACTO</a>
                             <a href="/ondeEstamos" class="w3-bar-item w3-button">ONDE ESTAMOS</a>
+                            @guest
+                            @else
+                            <a href="/pedidos/criar" class="w3-bar-item w3-button">ORÇAMENTOS</a>
+                            @endguest
                         </div>
                     </div>
                 </div>
@@ -46,35 +47,35 @@
     <div class="row">
       <div class="col-sm 1"></div>
       <div class="col-md 1">
-        <center><img src="images/identidadeVisual.png" class="tamanho" onmouseover="this.src='images/circuloCinza.png'" onmouseout="this.src='images/identidadeVisual.png'" alt="identidadeVisual"><br><br>
-        <font color="grey"><h6>IDENTIDADE VISUAL</h6></font></center>
+        <a href="portfolio/identidadevisual"><center><img src="images/identidadeVisual.png" class="tamanho" onmouseover="this.src='images/circuloCinza.png'" onmouseout="this.src='images/identidadeVisual.png'" alt="identidadeVisual"><br><br></a>
+        <h6><font color="grey">IDENTIDADE VISUAL</h6></font></center>
       </div>
       <div class="col-sm 1">
-        <center><img src="images/viaturas.png" class="tamanho" alt="viaturas" onmouseover="this.src='images/circuloCinza.png'" onmouseout="this.src='images/viaturas.png'"><br><br>
+        <a href="portfolio/viaturas"><center><img src="images/viaturas.png" class="tamanho" alt="viaturas" onmouseover="this.src='images/circuloCinza.png'" onmouseout="this.src='images/viaturas.png'"><br><br></a>
         <font color="grey"><h6>VIATURAS</h6></font></center>
       </div>
       <div class="col-sm 1">
-        <center><img src="images/montras.png" class="tamanho" alt="montras" onmouseover="this.src='images/circuloCinza.png'" onmouseout="this.src='images/montras.png'"><br><br>
+       <a href="portfolio/montras"><center><img src="images/montras.png" class="tamanho" alt="montras" onmouseover="this.src='images/circuloCinza.png'" onmouseout="this.src='images/montras.png'"><br><br></a> 
         <font color="grey"><h6>MONTRAS</h6></font></center>
       </div>
       <div class="col-sm 1">
-        <center><img src="images/lonas.png" class="tamanho" alt="lonas" onmouseover="this.src='images/circuloCinza.png'" onmouseout="this.src='images/lonas.png'"><br><br>
+        <a href="portfolio/lonas"><center><img src="images/lonas.png" class="tamanho" alt="lonas" onmouseover="this.src='images/circuloCinza.png'" onmouseout="this.src='images/lonas.png'"><br><br></a>
         <font color="grey"><h6>LONAS/EXPOSITORES</h6></font></center>
       </div>
       <div class="col-sm 1">
-        <center><img src="images/placasReclamos.png" class="tamanho" alt="placasReclamos" onmouseover="this.src='images/circuloCinza.png'" onmouseout="this.src='images/placasReclamos.png'"><br><br>
+        <a href="portfolio/placas"><center><img src="images/placasReclamos.png" class="tamanho" alt="placasReclamos" onmouseover="this.src='images/circuloCinza.png'" onmouseout="this.src='images/placasReclamos.png'"><br><br></a>
         <font color="grey"><h6>PLACAS/RECLAMOS</h6></font></center>
       </div>
       <div class="col-sm 1">
-        <center><img src="images/sinaletica.png" class="tamanho" alt="sinaletica" onmouseover="this.src='images/circuloCinza.png'" onmouseout="this.src='images/sinaletica.png'"><br><br>
+        <a href="portfolio/sinaletica"><center><img src="images/sinaletica.png" class="tamanho" alt="sinaletica" onmouseover="this.src='images/circuloCinza.png'" onmouseout="this.src='images/sinaletica.png'"><br><br></a>
         <font color="grey"><h6>SINALÉTICA</h6></font></center>
       </div>
       <div class="col-sm 1">
-        <center><img src="images/texteis.png" class="tamanho" alt="texteis" onmouseover="this.src='images/circuloCinza.png'" onmouseout="this.src='images/texteis.png'"><br><br>
+        <a href="portfolio/texteis"><center><img src="images/texteis.png" class="tamanho" alt="texteis" onmouseover="this.src='images/circuloCinza.png'" onmouseout="this.src='images/texteis.png'"><br><br></a>
         <font color="grey"><h6>TEXTEIS</h6></font></center>
       </div>
       <div class="col-sm 1">
-        <center><img src="images/bandeiras.png" class="tamanho" alt="bandeiras" onmouseover="this.src='images/circuloCinza.png'" onmouseout="this.src='images/bandeiras.png'"><br><br>
+        <a href="portfolio/bandeiras"><center><img src="images/bandeiras.png" class="tamanho" alt="bandeiras" onmouseover="this.src='images/circuloCinza.png'" onmouseout="this.src='images/bandeiras.png'"><br><br></a>
         <font color="grey"><h6>BANDEIRAS</h6></font></center>
       </div>
       <div class="col-sm 2"></div>

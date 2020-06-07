@@ -24,10 +24,22 @@ Route::get('/ondeEstamos', function () {
     return view('mais.ondeEstamos');
 });
 
+Route::get('portfolio/identidadevisual', 'backOffice@Identidade');
+Route::get('portfolio/viaturas', 'backOffice@Viaturas');
+Route::get('portfolio/montras', 'backOffice@Montras');
+Route::get('portfolio/lonas', 'backOffice@Lonas');
+Route::get('portfolio/placas', 'backOffice@Placas');
+Route::get('portfolio/sinaletica', 'backOffice@Sinaletica');
+Route::get('portfolio/texteis', 'backOffice@Texteis');
+Route::get('portfolio/bandeiras', 'backOffice@Bandeiras');
+
+
 Auth::routes();
 Route::post('mensagens/criar', 'backOffice@MensagemStore');
 
 Route::group(['middleware' => ['auth']], function(){
+    Route::get('pedidos/criar', 'backOffice@PedidoCreate');
+    Route::post('pedidos/criar', 'backOffice@PedidoStore');
 
     Route::group(['middleware' => ['admin']], function () {
         Route::get('/administracao', 'backOffice@MensagemIndex')->name('Administração');
@@ -39,6 +51,8 @@ Route::group(['middleware' => ['auth']], function(){
       Route::get('imagens', 'backOffice@ImagemIndex');
       Route::post('imagens/criar', 'backOffice@ImagemStore');
       Route::delete('imagens/{id}', 'backOffice@ImagemDestroy');
+      Route::post('imagens/estado/{id}', 'backOffice@ImagemState');
+      Route::get('imagens/procurar', 'backOffice@ImagemSearch');
 
       Route::get('mensagens', 'backOffice@MensagemIndex');
       Route::delete('mensagens/{id}', 'backOffice@MensagemDestroy');
