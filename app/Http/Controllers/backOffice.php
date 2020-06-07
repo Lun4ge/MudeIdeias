@@ -50,6 +50,7 @@ class backOffice extends Controller
 
         $imagens = new Portfolios();
         $imagens->tipo=$data['tipo'];
+        $imagens->estado='visivel';
         $img = $request->file('imagem');
         $imgname = time().'.'. $img->getClientOriginalExtension();
         $path = public_path('/portfolio');
@@ -65,7 +66,25 @@ class backOffice extends Controller
            $all=Portfolios::where(['id'=>$id])->first();
            unlink(public_path() .  '/portfolio/' . $all->imagem);
            Portfolios::where(['id'=>$id])->delete();
-           return redirect('/imagens');
+           return back();
+    }
+
+    public function ImagemSearch(Request $request)
+    {
+        $data = $request->all();
+        $all=Portfolios::where(['tipo'=>$data['tipo']])->get();
+        return view('admin.adicionar.imagens.imagensView')->with(compact("all"));
+    }
+
+    public function ImagemState($id)
+    {
+       $item=Portfolios::where(['id'=>$id])->first();
+    if($item->estado=='invisivel'){
+        Portfolios::where(['id'=>$id])->update(['estado'=>'visivel',]);}
+        else{Portfolios::where(['id'=>$id])->update(['estado'=>'invisivel',]);}
+
+    //    return redirect('/imagens');
+    return back();
     }
 
     //////////////////////////////////////////////////////
@@ -77,14 +96,30 @@ class backOffice extends Controller
         return view('admin.visualizar.pedidos.pedidosView');
     }
 
-    public function PedidoCreate($id)
+    public function PedidoCreate()
     {
-      
+      return view('mais.pedidos');
     }
 
     public function PedidoStore(Request $request)
     {
-      
+        // $request->validate([
+        //     'tituloMensagem' => 'required',
+        //     'Mensagem' => 'required',
+        // ]);
+        // $data = $request->all();
+
+        // $imagens = new Portfolios();
+        // $imagens->tipo=$data['tipo'];
+        // $imagens->estado='visivel';
+        // $img = $request->file('imagem');
+        // $imgname = time().'.'. $img->getClientOriginalExtension();
+        // $path = public_path('/portfolio');
+        // $img->move($path,$imgname);
+        // $imagens->imagem=$imgname;
+        // $imagens->save();
+        
+        // return redirect('/imagens');
     }
 
     public function PedidoDestroy($id)
@@ -160,6 +195,7 @@ class backOffice extends Controller
         {
             $request->validate([
                 'Nome' => 'required',
+                'Email'=>'required',
                 'tituloMensagem' =>'required',
                 'Mensagem'=>'required',
             ]);
@@ -182,4 +218,54 @@ class backOffice extends Controller
         }
     
        /////////////////////////////////////////////////////
+       /////////////////////////////////////////////////////
+       /////////////////////////////////////////////////////
+
+       public function Identidade()
+       {
+        $all=Portfolios::where(['estado'=>'visivel','tipo'=>'Identidade Visual'])->get();
+        return view('indexportpri')->with(compact("all"));
+       }
+
+       public function Viaturas()
+       {
+        $all=Portfolios::where(['estado'=>'visivel','tipo'=>'Viaturas'])->get();
+        return view('indexportpri')->with(compact("all"));
+       }
+
+       public function Montras()
+       {
+        $all=Portfolios::where(['estado'=>'visivel','tipo'=>'Montras'])->get();
+        return view('indexportpri')->with(compact("all"));
+       }
+
+       public function Lonas()
+       {
+        $all=Portfolios::where(['estado'=>'visivel','tipo'=>'Lonas/ Expositores'])->get();
+        return view('indexportpri')->with(compact("all"));
+       }
+
+       public function Placas()
+       {
+        $all=Portfolios::where(['estado'=>'visivel','tipo'=>'Placas/ Reclamos'])->get();
+        return view('indexportpri')->with(compact("all"));
+       }
+
+       public function Sinaletica()
+       {
+        $all=Portfolios::where(['estado'=>'visivel','tipo'=>'Sinalética'])->get();
+        return view('indexportpri')->with(compact("all"));
+       }
+
+       public function Texteis()
+       {
+        $all=Portfolios::where(['estado'=>'visivel','tipo'=>'Texteis'])->get();
+        return view('indexportpri')->with(compact("all"));
+       }
+
+       public function Bandeiras()
+       {
+        $all=Portfolios::where(['estado'=>'visivel','tipo'=>'Bandeiras'])->get();
+        return view('indexportpri')->with(compact("all"));
+       }
 }

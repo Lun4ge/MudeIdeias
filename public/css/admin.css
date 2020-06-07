@@ -79,6 +79,11 @@ color: #757573;
  padding: -5%;
 }
 
+.tabelaMarcasEstado{
+  background-color: #2e2e2d;
+  color: white;
+}
+
 .tabelaMarcasDelete:hover{
 background-color: #f23f3f;
 color: #c9c9c9;

@@ -24,20 +24,13 @@
             </h6>
             <center><hr style="height:1px;color:#c0d80f;background-color:#c0d80f" width="55%"></center>
             <div class="container; margem3">
-              <form>
+              <form method="POST" action="{{url('mensagens/criar')}}" enctype="multipart/form-data"> 
+                @csrf
                 <h3>PODEMOS AJUDAR</h3>
-                <div class="form-group">  
-                  {{--<h6><label for="exampleInputEmail1">Nome:</label></h6>--}}
-                  <h5><input type="text" class="tamanhoInput1" id="Nome" placeholder="Nome"></h5>
-                </div>
-                <div class="form-group">
-                  {{--<h6><label for="tituloMensagem">Titulo da Mensagem:</label></h6>--}}
-                  <h5><input type="text" class="tamanhoInput2" id="tituloMensagem" placeholder="Titulo da Mensagem"></h5>
-                </div>
-                <div class="form-group">
-                  {{--<h6><label for="Mensagem">Mensagem:</label></h6>--}}
-                  <h5><textarea id="w3mission" rows="5" class="tamanhoInput3" id="Mensagem" placeholder="Mensagem"></textarea></h5>
-                </div>
+                  <h5><input type="text" class="tamanhoInput1" id="Nome" name="Nome" placeholder="Nome"></h5>
+                  <h5><input type="text" class="tamanhoInput2" id="Email" name="Email" placeholder="Email"></h5>
+                  <h5><input type="text" class="tamanhoInput2" id="tituloMensagem" name="tituloMensagem" placeholder="Titulo da Mensagem"></h5>
+                  <h5><textarea rows="5" class="tamanhoInput3" id="Mensagem" name="Mensagem" placeholder="Mensagem"></textarea></h5>
                 <button type="submit" class="botao">Enviar</button>
               </form>
             </div>
