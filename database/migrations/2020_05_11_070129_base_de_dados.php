@@ -74,6 +74,7 @@ Schema::create('marcas',function (Blueprint $table){
 Schema::create('portfolios',function (Blueprint $table){
     $table->bigIncrements('id');
     $table->string('tipo');
+    $table->string('estado');
     $table->BigInteger('marcaid')->nullable()->unsigned();
     $table->string('imagem');
     $table->timestamps();
