@@ -32,6 +32,7 @@ class backOffice extends Controller
     public function ImagemIndex()
     {       
       $all = Portfolios::select()->get();
+    // $all = Portfolios::select()->paginate(2);
       return view('admin.adicionar.imagens.imagensView')->with(compact("all"));
     }
 
@@ -83,7 +84,6 @@ class backOffice extends Controller
         Portfolios::where(['id'=>$id])->update(['estado'=>'visivel',]);}
         else{Portfolios::where(['id'=>$id])->update(['estado'=>'invisivel',]);}
 
-    //    return redirect('/imagens');
     return back();
     }
 
@@ -101,7 +101,7 @@ class backOffice extends Controller
       return view('mais.pedidos');
     }
 
-    public function PedidoStore(Request $request)
+    public function PedidoStore($id,Request $request)
     {
         // $request->validate([
         //     'tituloMensagem' => 'required',
@@ -164,12 +164,12 @@ class backOffice extends Controller
        public function MarcaStore(Request $request)
        {
         $request->validate([
-            'marca' => 'required',
+            'nome' => 'required|unique:marcas',
         ]);
         
         $data = $request->all();
         $marca = new Marcas();
-        $marca->nome=$data['marca'];
+        $marca->nome=$data['nome'];
         $marca->save();
         
         return redirect('/marcas');
