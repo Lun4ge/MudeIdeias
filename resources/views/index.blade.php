@@ -66,7 +66,7 @@
         <font color="grey"><h6>PLACAS/RECLAMOS</h6></font></center>
       </div>
       <div class="col-sm 1">
-        <center><img src="images/sinaletica.png" class="tamanho" alt="sinaletica" onmouseover="this.src='images/circuloCinza.png'" onmouseout="this.src='images/sinaletica.png'"><br><br>
+        <center><img src="images/sinaletica.png" class="tamanho" alt="montras" onmouseover="this.src='images/circuloCinza.png'" onmouseout="this.src='images/sinaletica.png'"><br><br>
         <font color="grey"><h6>SINALÉTICA</h6></font></center>
       </div>
       <div class="col-sm 1">

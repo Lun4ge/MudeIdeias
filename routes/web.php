@@ -22,6 +22,10 @@ Route::get('/ondeEstamos', function () {
     return view('mais.ondeEstamos');
 });
 
+Route::get('/pedidoOrcamentos', function () {
+    return view('pedidoOrcamentos');
+});
+
 Auth::routes();
 Route::get('/administracao', 'backOffice@index')->name('Administração');
 
