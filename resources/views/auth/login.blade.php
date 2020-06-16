@@ -6,7 +6,8 @@
 <section>
     <br><br><br>
     <div class="container">
-        <form>
+        <form method="POST" action="{{ route('login') }}">
+            @csrf
             <h2 class="margem">LOGIN</h2>
             <br><br>
             <div class="form-group row">

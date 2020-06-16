@@ -20,21 +20,33 @@
               @csrf
               <th scope="row"></th>
               <td></td>
-              <td><input type="text" class="form-control" id="marca" name="marca" placeholder="Nome da Marca"></td>
+              <td><input type="text" class="form-control" id="nome" name="nome" placeholder="Nome da Marca"></td>
               <td><input type="submit" value="Criar" class="btn confirmButton"></td></form>
-
         </tr>
     @foreach ($all as $item)
         <tr>
           <th scope="row" class="tabelaMarcasText">{{$item->id}}</th>
           <td class="tabelaMarcasText">{{$item->nome}}</td>
-          <td></td>
+          <td>
+
+            {{-- <form method="POST" action="{{url('marcas/{{$item->id}}/edit')}}" enctype="multipart/form-data"> 
+              @csrf --}}
+              <input type="text" id="nome" name="nome" value="{{$item->nome}}" maxlength="25" size="25">
+              {{-- <button type="file" value="X" class="btn tabelaMarcasDelete"><i class="fas fa-trash"></i></button> --}}
+              <label for="fusk" class="btn tabelaMarcasDelete"><i class="fas fa-trash"></i></label>
+              <input id="fusk" type="file" name="imagem" style="display: none;">
+              <input type="submit" value="Criar" class="btn confirmButton">
+              {{-- <i class="fas fa-check"></i> --}}
+              {{-- <i class="fas fa-ban"></i> --}}
+            {{-- </form> --}}
+
+          </td>
           <td>
             <form action="/marcas/{{$item->id}}" method="POST">
-              <input onClick="window.location.href='/marcas/{{$item->id}}/edit'" class="btn tabelaMarcasEdit" type="button" Value="Editar">
+              <button onClick="window.location.href='/marcas/{{$item->id}}/edit'" class="btn tabelaMarcasEdit" type="button"><i class="fas fa-pen"></i></button>
               @csrf
               @method('delete')
-              <input type="submit" value="Eliminar" class="btn tabelaMarcasDelete">
+              <button type="submit" value="Eliminar" class="btn tabelaMarcasDelete"><i class="fas fa-trash-alt"></i></button>
             </form>
           </td>
         </tr>
