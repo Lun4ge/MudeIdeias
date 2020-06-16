@@ -24,6 +24,9 @@ Route::get('/ondeEstamos', function () {
     return view('mais.ondeEstamos');
 });
 
+// Route::get('/pedidoOrcamentos', function () {
+//     return view('pedidoOrcamentos');
+
 Route::get('portfolio/identidadevisual', 'backOffice@Identidade');
 Route::get('portfolio/viaturas', 'backOffice@Viaturas');
 Route::get('portfolio/montras', 'backOffice@Montras');
@@ -32,7 +35,6 @@ Route::get('portfolio/placas', 'backOffice@Placas');
 Route::get('portfolio/sinaletica', 'backOffice@Sinaletica');
 Route::get('portfolio/texteis', 'backOffice@Texteis');
 Route::get('portfolio/bandeiras', 'backOffice@Bandeiras');
-
 
 Auth::routes();
 Route::post('mensagens/criar', 'backOffice@MensagemStore');
