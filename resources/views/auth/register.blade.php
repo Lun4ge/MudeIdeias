@@ -6,7 +6,8 @@
 <section>
     <br><br><br>
     <div class="container">
-        <form>
+        <form method="POST" action="{{ route('register') }}">
+            @csrf
             <h2 class="margem">REGISTAR</h2>
             <br><br>
             <div class="form-group row">

@@ -24,7 +24,7 @@
             </p>
             <center><hr style="height:1px;color:#c0d80f;background-color:#c0d80f" width="55%"></center>
             <div class="container">
-              <form>
+              <form method="POST" action="{{url('mensagens/criar')}}" enctype="multipart/form-data">
                 <h3 class="margem3" id="titulo">PODEMOS AJUDAR</h3><br>
                 <div class="form-group; margem3">  
                   <h5><label for="exampleInputEmail1" id="Nome">Nome:</label>
