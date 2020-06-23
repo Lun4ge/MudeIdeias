@@ -3,3 +3,14 @@ footer{
     margin-left: 6%;
     position: fixed;
 }
+#voltar{
+    height: 45%;
+    width: 25%;
+}
+#inicio{
+    height: 30%;
+    width: 18%;
+}
+#texto{
+    font-size: 0.75vw;
+}

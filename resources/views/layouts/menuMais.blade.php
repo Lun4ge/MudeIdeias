@@ -3,10 +3,9 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
-
+    <link rel="stylesheet" href="{{asset('css/menuMais.css')}}">
     <title>{{ config('app.name', 'Laravel') }}</title>
 
     <!-- Scripts -->
@@ -22,13 +21,13 @@
 <body>
     <div id="menuMais">
         <br><br><br><br>
-        <a href="/quemsomos"><font style="color:black" size="5">QUEM SOMOS</a></font> <br><br>
-        <a href="/oquefazemos"><font style="color:black" size="5">O QUE FAZEMOS</a></font> <br><br>
-        <a href="/contacto"><font style="color:black" size="5">CONTACTO</a></font> <br><br>
-        <a href="/ondeEstamos"><font style="color:black" size="5">ONDE ESTAMOS</a></font>
+        <a href="/quemsomos" style="text-decoration:none">QUEM SOMOS</a><br><br>
+        <a href="/oquefazemos" style="text-decoration:none">O QUE FAZEMOS</a><br><br>
+        <a href="/contacto" style="text-decoration:none">CONTACTO</a><br><br>
+        <a href="/ondeEstamos" style="text-decoration:none">ONDE ESTAMOS</a>
         <br><br><br><br>
-        <img src="images/redesSociais.png" alt="redes sociais"> <br><br><br>
-        <img src="images/20anos.png" alt="20 anos">
+        <img src="images/redesSociais.png" class="redes" alt="redes sociais"> <br><br><br>
+        <img src="images/20anos.png" class="anos" alt="20 anos">
     </div>
 </body>
 </html>

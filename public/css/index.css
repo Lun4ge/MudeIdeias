@@ -17,7 +17,7 @@
     float: right;    
     margin: 1%;
 }
-.zoom {
+/*.zoom {
     padding: 5%;
     transition: transform .2s;
     margin: 0 auto;
@@ -26,4 +26,17 @@
     -ms-transform: scale(1.5);
     -webkit-transform: scale(1.5);
     transform: scale(1.5); 
+}*/
+.div{
+    width: 80%;
+    background-color: lightgrey;
+    margin-left: 10%;
 }
+h6{
+    text-align: center;
+    color: grey;
+}
+.sizeImagem{
+    
+}
+html { font-size: 0.75vw; }

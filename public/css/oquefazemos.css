@@ -6,11 +6,39 @@
   border-left: 1px solid #c0d80f;
   height: 650px;
 }
-.linhaPequena {
+.linhaPequena1 {
   border-left: 1px solid #c0d80f;
-  height: 300px;
+  height: 325px;
 }
-.imagem{
+.linhaPequena2 {
+  border-left: 1px solid #c0d80f;
+  height: 280px;
+}
+#logo{
   margin-top: 2%;
   margin-left: 4%;
+  height: 8%;
+  width: 8%;
+}
+.p1{
+  font-size: 0.80vw;
+}
+.p2{
+  font-size: 0.70vw;
+}
+.image1{
+  height: 30%;
+  width: 40%;
+}
+.image2{
+  height: 35%;
+  width: 40%;
+}
+.image3{
+  height: 30%;
+  width: 60%;
+}
+.image4{
+  height: 35%;
+  width: 65%;
 }

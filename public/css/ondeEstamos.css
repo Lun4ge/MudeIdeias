@@ -5,10 +5,25 @@
   border-left: 1px solid #c0d80f;
   height: 650px;
 }
-.imagem{
+#logo{
   margin-top: 2%;
   margin-left: 4%;
+  height: 8%;
+  width: 8%;
 }
 .margem2{
   margin-left: 40%;;
 }
+#texto{
+  font-size: 1vw;
+}
+#googleMap{
+  height: 65%;
+  width: 75%;
+  margin-left: 12%;
+}
+#localizacao{
+  height: 5%;
+  width: 5%;
+}
+html {font-size: 1vw;};
