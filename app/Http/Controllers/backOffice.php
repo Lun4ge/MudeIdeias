@@ -30,7 +30,8 @@ class backOffice extends Controller
 
     public function home()
     {
-        return view('index');
+        $all=Portfolios::where(['estado'=>'visivel','tipo'=>'Identidade Visual'])->get();
+        return view('index')->with(compact("all"));
     }
 
 
@@ -302,48 +303,48 @@ class backOffice extends Controller
        public function Identidade()
        {
         $all=Portfolios::where(['estado'=>'visivel','tipo'=>'Identidade Visual'])->get();
-        return view('indexportpri')->with(compact("all"));
+        return view('index')->with(compact("all"));
        }
 
        public function Viaturas()
        {
         $all=Portfolios::where(['estado'=>'visivel','tipo'=>'Viaturas'])->get();
-        return view('indexportpri')->with(compact("all"));
+        return view('index')->with(compact("all"));
        }
 
        public function Montras()
        {
         $all=Portfolios::where(['estado'=>'visivel','tipo'=>'Montras'])->get();
-        return view('indexportpri')->with(compact("all"));
+        return view('index')->with(compact("all"));
        }
 
        public function Lonas()
        {
         $all=Portfolios::where(['estado'=>'visivel','tipo'=>'Lonas/ Expositores'])->get();
-        return view('indexportpri')->with(compact("all"));
+        return view('index')->with(compact("all"));
        }
 
        public function Placas()
        {
         $all=Portfolios::where(['estado'=>'visivel','tipo'=>'Placas/ Reclamos'])->get();
-        return view('indexportpri')->with(compact("all"));
+        return view('index')->with(compact("all"));
        }
 
        public function Sinaletica()
        {
         $all=Portfolios::where(['estado'=>'visivel','tipo'=>'Sinalética'])->get();
-        return view('indexportpri')->with(compact("all"));
+        return view('index')->with(compact("all"));
        }
 
        public function Texteis()
        {
         $all=Portfolios::where(['estado'=>'visivel','tipo'=>'Texteis'])->get();
-        return view('indexportpri')->with(compact("all"));
+        return view('index')->with(compact("all"));
        }
 
        public function Bandeiras()
        {
         $all=Portfolios::where(['estado'=>'visivel','tipo'=>'Bandeiras'])->get();
-        return view('indexportpri')->with(compact("all"));
+        return view('index')->with(compact("all"));
        }
 }
