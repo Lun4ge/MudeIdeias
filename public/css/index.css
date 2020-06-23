@@ -5,6 +5,11 @@
     width: 100%;
     height: auto;
 }
+
+.texto{
+    text-align: center;
+}
+
 .footer { 
     left: 0;
     bottom: 0;
@@ -26,7 +31,7 @@
     -ms-transform: scale(1.5);
     -webkit-transform: scale(1.5);
     transform: scale(1.5); 
-}*/
+
 .div{
     width: 80%;
     background-color: lightgrey;
@@ -39,4 +44,5 @@ h6{
 .sizeImagem{
     
 }
-html { font-size: 0.75vw; }
+html { font-size: 0.75vw; }*/
+

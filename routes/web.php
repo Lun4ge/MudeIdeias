@@ -1,6 +1,10 @@
 <?php
 
+use App\Mail\enviarorcamentos;
 use Illuminate\Support\Facades\Route;
+use App\Orcamentosenviados;
+use Illuminate\Support\Facades\Mail;
+
 
 Route::get('/', function () {
     return view('index');
@@ -60,8 +64,20 @@ Route::group(['middleware' => ['auth']], function(){
       Route::delete('mensagens/{id}', 'backOffice@MensagemDestroy');
 
       Route::get('pedidos', 'backOffice@PedidoIndex');
+      Route::get('pedidos/{id}/unico','backOffice@PedidoIndexIndi');
 
       Route::get('enviados', 'backOffice@EnviadoIndex');
+      Route::post('enviados/{id}/criar','backOffice@EnviadoStore');
+
+    //   Route::get('/mail',function(){
+    //   Mail::send('admin.mail', ['naointeressa' => 'teste1'] , function ($message) {
+    //       $message->from('automailmudedideias@gmail.com', 'John Doe');
+    //       $message->to('rafaelxomega@gmail.com', 'John Doe');
+    //     }); });
+
+    Route::get('/mail', function() {
+       Mail::to('rafaelxomega@gmail.com')->send(new App\Mail\enviarorcamentos);
+    });
 
     });
   });

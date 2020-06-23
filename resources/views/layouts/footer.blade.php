@@ -22,9 +22,11 @@
 </head>
 <body>
     <footer>
-        <a href="javascript:javascript:history.go(-1)"><img src="images/voltar.png" id="voltar" alt="voltar"></a><font id="texto" style="color:black">&nbsp;&nbsp;Voltar</font>
+
+        <a href="javascript:javascript:history.go(-1)"><img src="{{asset('images/voltar.png')}}" alt="voltar"></a><font style="color:black">&nbsp;&nbsp;Voltar</font>
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <a href="/"><img src="images/inicio.png" id="inicio" alt="inicio"></a><font id="texto" style="color:black">&nbsp;&nbsp;Inicio</font>
+        <a href="/"><img src="{{asset('images/inicio.png')}}" alt="inicio"></a><font style="color:black">&nbsp;&nbsp;Inicio</font>
+
     </footer>
 </body>
 </html>
