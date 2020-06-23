@@ -6,6 +6,13 @@ use Illuminate\Http\Request;
 use App\Marcas;
 use App\Portfolios;
 use App\Contactos;
+use App\Imagenspedidos;
+use App\Imagensenviados;
+use App\Mail\enviarorcamentos;
+use App\Orcamentospedidos;
+use App\Orcamentosenviados;
+use Illuminate\Support\Facades\Mail;
+
 
 use function GuzzleHttp\Promise\all;
 
@@ -80,7 +87,7 @@ class backOffice extends Controller
     public function ImagemState($id)
     {
        $item=Portfolios::where(['id'=>$id])->first();
-    if($item->estado=='invisivel'){
+    if($item->estado =='invisivel'){
         Portfolios::where(['id'=>$id])->update(['estado'=>'visivel',]);}
         else{Portfolios::where(['id'=>$id])->update(['estado'=>'invisivel',]);}
 
@@ -93,7 +100,16 @@ class backOffice extends Controller
 
     public function PedidoIndex()
     {
-        return view('admin.visualizar.pedidos.pedidosView');
+        $all = Orcamentospedidos::select()->get();
+        return view('admin.visualizar.pedidos.pedidosView')->with(compact("all"));
+    }
+
+    public function PedidoIndexIndi($id)
+    {
+        $all = Orcamentospedidos::select()->get();
+        $onlyim = Imagenspedidos::where(['orcamentoid'=>$id])->get();
+        $only = Orcamentospedidos::where(['id'=>$id])->first();
+        return view('admin.visualizar.pedidos.pedidosUnico')->with(compact("all","only","onlyim"));
     }
 
     public function PedidoCreate()
@@ -101,25 +117,40 @@ class backOffice extends Controller
       return view('mais.pedidos');
     }
 
-    public function PedidoStore($id,Request $request)
+    public function PedidoStore(Request $request)
     {
-        // $request->validate([
-        //     'tituloMensagem' => 'required',
-        //     'Mensagem' => 'required',
-        // ]);
-        // $data = $request->all();
+        $request->validate([
+            'tituloMensagem' => 'required',
+            'Mensagem' => 'required',
+        ]);
 
-        // $imagens = new Portfolios();
-        // $imagens->tipo=$data['tipo'];
-        // $imagens->estado='visivel';
-        // $img = $request->file('imagem');
-        // $imgname = time().'.'. $img->getClientOriginalExtension();
-        // $path = public_path('/portfolio');
-        // $img->move($path,$imgname);
-        // $imagens->imagem=$imgname;
-        // $imagens->save();
-        
-        // return redirect('/imagens');
+        $data = $request->all(); 
+        $pedidos = new Orcamentospedidos();
+        $pedidos->titulo=$data['tituloMensagem'];
+        $pedidos->mensagem=$data['Mensagem'];
+        $pedidos->estado='Por Responder';
+        $pedidos->userid=Auth()->user()->id;
+        $pedidos->save();
+
+        $pedidoCriado = $pedidos->id;
+        if($request->hasFile('imagem')) 
+        {
+            $cont = 1;
+            foreach($request->file('imagem') as $file)
+            {
+                $imagens = new Imagenspedidos;
+                $imgname = time(). $cont .'.'. $file->getClientOriginalExtension();
+                $path = public_path('/imagenspedidos');
+                $file->move($path,$imgname);
+
+                $imagens->orcamentoid=$pedidoCriado;
+                $imagens->imagem=$imgname;
+                $cont++;
+                $imagens->save();
+            }
+        }
+
+        return back();
     }
 
     public function PedidoDestroy($id)
@@ -136,9 +167,56 @@ class backOffice extends Controller
         return view('admin.visualizar.enviados.enviadosView');
        }
 
-       public function EnviadoStore(Request $request)
+       public function EnviadoStore($id,Request $request)
        {
+       
+        $request->validate([
+            'titulo' => 'required',
+            'mensagem' => 'required',
+        ]);  
+
+
+            $data = $request->all();
+            $enviados = new Orcamentosenviados();
+            $enviados->pedidoid = $id;
+            $enviados->titulo=$data['titulo'];
+            $enviados->mensagem=$data['mensagem'];
+            $enviados->preco=$data['preco'];
+            $enviados->save();
+
+            $pedidoEnviado = $enviados->id;
+            if($request->hasFile('ficheiro'))
+            {
+                $cont = 1;
+                foreach($request->file('ficheiro') as $file)
+                {
+                    $imagens = new Imagensenviados();
+                    $imgname = time(). $cont .'.'. $file->getClientOriginalExtension();
+                    $path = public_path('/imagensenviadas');
+                    $file->move($path,$imgname);
     
+                    $imagens->orcamentoid=$pedidoEnviado;
+                    $imagens->imagem=$imgname;
+                    $cont++;
+                    $imagens->save();
+                }
+                
+                // $info = Orcamentosenviados::where(['id'=>$enviados->id])->first(); 
+                // Mail::send('admin.mail',  $data, function($message) {
+                //    $message->to('rafaelxomega@gmail.com')->subject('Laravel HTML Testing Mail');
+                   
+                // //    foreach($data->file('ficheiro') as $file)
+                // //    {$message->attach('C:\laravel-master\laravel\public\uploads\image.png');}
+
+                //    $message->from('automailmudedideias@gmail.com');
+                // });
+                
+            }else
+            {
+                // Mail::to('rafaelxomega@gmail.com')->send(new enviarorcamentos);
+            }
+            Mail::to('rafaelxomega@gmail.com')->send(new enviarorcamentos);
+            return redirect('pedidos');
        }
    
        public function EnviadoDestroy($id)

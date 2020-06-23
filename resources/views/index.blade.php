@@ -43,40 +43,32 @@
     </div>
     </nav>
     <img src="images/inicial.jpg" alt="incio" width="100%" height="auto">
-    {{--<img src="images/balao.png" alt="balao" class="zoom" align="fixed">--}}
     <div class="row">
-      <div class="col-sm 1"></div>
+      <div class="col-sm 2"></div>
       <div class="col-md 1">
-        <a href="portfolio/identidadevisual"><center><img src="images/identidadeVisual.png" class="tamanho" onmouseover="this.src='images/circuloCinza.png'" onmouseout="this.src='images/identidadeVisual.png'" alt="identidadeVisual"><br><br></a>
-        <h6><font color="grey">IDENTIDADE VISUAL</h6></font></center>
+        <a href="portfolio/identidadevisual"><img src="images/identidadeVisual.png" class="tamanho" onmouseover="this.src='images/circuloCinza.png'" onmouseout="this.src='images/identidadeVisual.png'" alt="identidadeVisual"></a>
+        <b style=" text-align: center;">EHEHE</b>
       </div>
       <div class="col-sm 1">
-        <a href="portfolio/viaturas"><center><img src="images/viaturas.png" class="tamanho" alt="viaturas" onmouseover="this.src='images/circuloCinza.png'" onmouseout="this.src='images/viaturas.png'"><br><br></a>
-        <font color="grey"><h6>VIATURAS</h6></font></center>
+        <a href="portfolio/viaturas"><img src="images/viaturas.png" class="tamanho" alt="viaturas" onmouseover="this.src='images/circuloCinza.png'" onmouseout="this.src='images/viaturas.png'"></a>
       </div>
-      <div class="col-sm 1">
-       <a href="portfolio/montras"><center><img src="images/montras.png" class="tamanho" alt="montras" onmouseover="this.src='images/circuloCinza.png'" onmouseout="this.src='images/montras.png'"><br><br></a> 
-        <font color="grey"><h6>MONTRAS</h6></font></center>
+      <div class="col-sm 1" class="texto">
+       <a href="portfolio/montras"><img src="images/montras.png" class="tamanho" alt="montras" onmouseover="this.src='images/circuloCinza.png'" onmouseout="this.src='images/montras.png'"></a> 
       </div>
-      <div class="col-sm 1">
-        <a href="portfolio/lonas"><center><img src="images/lonas.png" class="tamanho" alt="lonas" onmouseover="this.src='images/circuloCinza.png'" onmouseout="this.src='images/lonas.png'"><br><br></a>
-        <font color="grey"><h6>LONAS/EXPOSITORES</h6></font></center>
+      <div class="col-sm 1" class="texto">
+        <a href="portfolio/lonas"><img src="images/lonas.png" class="tamanho" alt="lonas" onmouseover="this.src='images/circuloCinza.png'" onmouseout="this.src='images/lonas.png'"></a>
       </div>
-      <div class="col-sm 1">
-        <a href="portfolio/placas"><center><img src="images/placasReclamos.png" class="tamanho" alt="placasReclamos" onmouseover="this.src='images/circuloCinza.png'" onmouseout="this.src='images/placasReclamos.png'"><br><br></a>
-        <font color="grey"><h6>PLACAS/RECLAMOS</h6></font></center>
+      <div class="col-sm 1" class="texto">
+        <a href="portfolio/placas"><img src="images/placasReclamos.png" class="tamanho" alt="placasReclamos" onmouseover="this.src='images/circuloCinza.png'" onmouseout="this.src='images/placasReclamos.png'"></a>
       </div>
-      <div class="col-sm 1">
-        <a href="portfolio/sinaletica"><center><img src="images/sinaletica.png" class="tamanho" alt="sinaletica" onmouseover="this.src='images/circuloCinza.png'" onmouseout="this.src='images/sinaletica.png'"><br><br></a>
-        <font color="grey"><h6>SINALÉTICA</h6></font></center>
+      <div class="col-sm 1" class="texto">
+        <a href="portfolio/sinaletica"><img src="images/sinaletica.png" class="tamanho" alt="sinaletica" onmouseover="this.src='images/circuloCinza.png'" onmouseout="this.src='images/sinaletica.png'"></a>
       </div>
-      <div class="col-sm 1">
-        <a href="portfolio/texteis"><center><img src="images/texteis.png" class="tamanho" alt="texteis" onmouseover="this.src='images/circuloCinza.png'" onmouseout="this.src='images/texteis.png'"><br><br></a>
-        <font color="grey"><h6>TEXTEIS</h6></font></center>
+      <div class="col-sm 1" class="texto">
+        <a href="portfolio/texteis"><img src="images/texteis.png" class="tamanho" alt="texteis" onmouseover="this.src='images/circuloCinza.png'" onmouseout="this.src='images/texteis.png'"></a>
       </div>
-      <div class="col-sm 1">
-        <a href="portfolio/bandeiras"><center><img src="images/bandeiras.png" class="tamanho" alt="bandeiras" onmouseover="this.src='images/circuloCinza.png'" onmouseout="this.src='images/bandeiras.png'"><br><br></a>
-        <font color="grey"><h6>BANDEIRAS</h6></font></center>
+      <div class="col-sm 1" class="texto">
+        <a href="portfolio/bandeiras"><img src="images/bandeiras.png" class="tamanho" alt="bandeiras" onmouseover="this.src='images/circuloCinza.png'" onmouseout="this.src='images/bandeiras.png'"></a>
       </div>
       <div class="col-sm 2"></div>
     </div>

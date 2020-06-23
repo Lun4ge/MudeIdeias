@@ -5,6 +5,11 @@
     width: 100%;
     height: auto;
 }
+
+.texto{
+    text-align: center;
+}
+
 .footer { 
     left: 0;
     bottom: 0;
@@ -27,3 +32,11 @@
     -webkit-transform: scale(1.5);
     transform: scale(1.5); 
 }
+
+/* @media screen and (max-width: 600px) {
+    .tamanho {
+      width: 50%;
+      height: auto;
+      /* margin-top: 0; */
+    }
+  } */
