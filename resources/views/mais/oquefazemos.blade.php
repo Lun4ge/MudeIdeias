@@ -11,61 +11,61 @@
     <title>O Que Fazemos</title>
   </head>
   <body>
-    <a href="/"><img src="images/logo.png" class="imagem" alt="logo" height="90"></a>
+    <a href="/"><img src="images/logo.png" class="imagem" alt="logo" id="logo"></a>
     <section>
-      <br><br>
+      <br>
       <div class="container-fluid; margem">
         <div class="row">
           <div class="col-md-8">
             <div class="row">
               <div class="col-md-3">
-                <img src="images/identidadeVisual.png" alt="identidadeVisual" height="70" width="70"><br><br>
-                <strong>IDENTIDADE VISUAL</strong> <br><br>
-                &bull; Concepção gráfica de logotipos / marcas <br>	&bull; Cartões de visita <br>	&bull; Papel de Carta e envelopes <br> &bull; Capas e porta documentos
+                <img src="images/identidadeVisual.png" alt="identidadeVisual" class="image1"><br><br>
+                <p class="p1"><strong>IDENTIDADE VISUAL</strong></p> <br>
+                <p class="p2">&bull; Concepção gráfica de logotipos / marcas <br>	&bull; Cartões de visita <br>	&bull; Papel de Carta e envelopes <br> &bull; Capas e porta documentos</p>
               </div>
-              <div class="col-md-1; linhaPequena"></div>
+              <div class="col-md-1; linhaPequena1"></div>
               <div class="col-md-3">
-                <img src="images/viaturas.png" alt="viaturas" height="70" width="70"><br><br>
-                <strong>VIATURAS</strong> <br><br>
-                &bull; Decoração vinil recorte <br> &bull; Decoração vinil impresso + laminação UV <br> &bull; Decoração vinil reflector especial viaturas prioritárias
+                <img src="images/viaturas.png" alt="viaturas" class="image1"><br><br>
+                <p class="p1"><strong>VIATURAS</strong></p> <br>
+                <p class="p2">&bull; Decoração vinil recorte <br> &bull; Decoração vinil impresso + laminação UV <br> &bull; Decoração vinil reflector especial viaturas prioritárias</p>
               </div>
-              <div class="col-md-1; linhaPequena"></div>
+              <div class="col-md-1; linhaPequena1"></div>
               <div class="col-md-3">
-                <img src="images/montras.png" alt="montras" height="70" width="70"><br><br>
-                <strong>MONTRAS</strong> <br><br>
-                &bull; Decoração vinil recorte <br> &bull; Decoração vinil impresso + laminação UV <br> &bull; Decoração vinil impresso micro-perfurado <br> &bull; Decoração vinil imitação vidro fosco
+                <img src="images/montras.png" alt="montras" class="image1"><br><br>
+                <p class="p1"><strong>MONTRAS</strong></p> <br>
+                <p class="p2">&bull; Decoração vinil recorte <br> &bull; Decoração vinil impresso + laminação UV <br> &bull; Decoração vinil impresso micro-perfurado <br> &bull; Decoração vinil imitação vidro fosco</p>
               </div>
-              <div class="col-md-1; linhaPequena"></div>
+              <div class="col-md-1; linhaPequena1"></div>
               <div class="col-md-2">
-                <img src="images/lonas.png" alt="lonas" height="70" width="70"><br><br>
-                <strong>LONAS / EXPOSITORES</strong> <br><br>
-                &bull; Impressão digital <br> &bull; Coladas vinil recorte especial BANNER <br> &bull; Roll Ups <br> &bull; Pop Ups / Stands
+                <img src="images/lonas.png" alt="lonas" class="image3"><br><br>
+                <p class="p1"><strong>LONAS / EXPOSITORES</strong></p> 
+                <p class="p2">&bull; Impressão digital <br> &bull; Coladas vinil recorte especial BANNER <br> &bull; Roll Ups <br> &bull; Pop Ups / Stands</p>
               </div>
             </div>
-            <br><br>
+            <br>
             <div class="row">
               <div class="col-md-3">
-                <img src="images/placasReclamos.png" alt="placasReclamos" height="70" width="70"><br><br>
-                <strong>PLACAS / RECLAMOS</strong> <br><br>
-                &bull; Luminosos <br> &bull; Flat / Placas <br> &bull; Luz indirecta <br> &bull; Frente em Telas <br> &bull; DIBON / Acrílico / PVC
+                <img src="images/placasReclamos.png" alt="placasReclamos2" class="image2"><br><br>
+                <p class="p1"><strong>PLACAS / RECLAMOS</strong></p> <br>
+                <p class="p2">&bull; Luminosos <br> &bull; Flat / Placas <br> &bull; Luz indirecta <br> &bull; Frente em Telas <br> &bull; DIBON / Acrílico / PVC</p>
               </div>
-              <div class="col-md-1; linhaPequena"></div>
+              <div class="col-md-1; linhaPequena2"></div>
               <div class="col-md-3">
-                <img src="images/sinaletica.png" alt="sinaletica" height="70" width="70"><br><br>
-                <strong> SINALÉTICA</strong> <br><br>
-                &bull; Indetificação <br> &bull; Obrigatória <br> &bull; Direcção
+                <img src="images/sinaletica.png" alt="sinaletica" class="image2"><br><br>
+                <p class="p1"><strong> SINALÉTICA</strong></p> <br>
+                <p class="p2">&bull; Indetificação <br> &bull; Obrigatória <br> &bull; Direcção</p>
               </div>
-              <div class="col-md-1; linhaPequena"></div>
+              <div class="col-md-1; linhaPequena2"></div>
               <div class="col-md-3">
-                <img src="images/texteis.png" alt="texteis" height="70" width="70"><br><br>
-                <strong>TEXTEIS</strong> <br><br>
-                &bull; T-Shirts / Polos / Sweats <br> &bull; Flex termo-soldavél <br> &bull; Bordado / Serigrafia
+                <img src="images/texteis.png" alt="texteis" class="image2"><br><br>
+                <p class="p1"><strong>TEXTEIS</strong></p> <br>
+                <p class="p2">&bull; T-Shirts / Polos / Sweats <br> &bull; Flex termo-soldavél <br> &bull; Bordado / Serigrafia</p>
               </div>
-              <div class="col-md-1; linhaPequena"></div>
+              <div class="col-md-1; linhaPequena2"></div>
               <div class="col-md-2">
-                <img src="images/bandeiras.png" alt="bandeiras" height="70" width="70"><br><br>
-                <strong>BANDEIRAS</strong> <br><br>
-                &bull; Tipo Pena <br> &bull; Tipo Gota <br> &bull; Normais standart <br> &bull; Pendões
+                <img src="images/bandeiras.png" alt="bandeiras" class="image4"><br><br>
+                <p class="p1"><strong>BANDEIRAS</strong></p> <br>
+                <p class="p2">&bull; Tipo Pena <br> &bull; Tipo Gota <br> &bull; Normais standart <br> &bull; Pendões</p>
               </div>
             </div>
           </div>
@@ -78,6 +78,7 @@
         </div>
       </div>
     </section>
+    <br>
     @include('layouts/footer')
 
     <!-- Optional JavaScript -->

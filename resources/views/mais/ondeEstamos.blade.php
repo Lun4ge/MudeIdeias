@@ -11,17 +11,17 @@
     <title>Onde Estamos</title>
   </head>
   <body>
-    <a href="/"><img src="images/logo.png" class="imagem" alt="logo" height="90"></a>
+    <a href="/"><img src="images/logo.png" alt="logo" id="logo"></a>
     <section>
       <br><br>
       <div class="container-fluid; margem">
         <div class="row">
           <div class="col-md-8">
-            <h6 class="margem2">
-              <img src="images/localizacao.png" alt="localizacao" height="30">&nbsp;&nbsp;Zona Industrial - Lote 14 B <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2125 - 363 Muge<br><br>
-            </h6>
+            <p class="margem2" id="texto">
+              <img src="images/localizacao.png" alt="localizacao" id="localizacao">&nbsp;&nbsp;Zona Industrial - Lote 14 B <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2125 - 363 Muge<br><br>
+            </p>
             <br>
-            <center><div id="googleMap" style="width:900px;height:500px;"></div>
+            <div id="googleMap"></div>
             <script>
               function myMap() {
                 var mapProp= {
@@ -37,7 +37,7 @@
                 });
               }
             </script>
-            <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCqeKtkpFmwWgsO0CgBRM-CT2Civ8oYui0&callback=myMap"></script></center>
+            <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCqeKtkpFmwWgsO0CgBRM-CT2Civ8oYui0&callback=myMap"></script>
           </div>
           <div class="col-md-1; linha"></div>
           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;

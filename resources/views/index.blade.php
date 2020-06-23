@@ -26,14 +26,10 @@
                     <div class="w3-dropdown-hover">
                         <button class="w3-button w3-white"><img src="images/mais.png" alt="mais" height="60"></button>
                         <div class="w3-dropdown-content w3-bar-block">
-                            <a href="/quemsomos" class="w3-bar-item w3-button">QUEM SOMOS</a>
-                            <a href="/oquefazemos" class="w3-bar-item w3-button">O QUE FAZEMOS</a>
-                            <a href="/contacto" class="w3-bar-item w3-button">CONTACTO</a>
-                            <a href="/ondeEstamos" class="w3-bar-item w3-button">ONDE ESTAMOS</a>
-                            @guest
-                            @else
-                            <a href="/pedidos/criar" class="w3-bar-item w3-button">ORÇAMENTOS</a>
-                            @endguest
+                            <a href="/quemsomos" class="w3-bar-item w3-button" style="text-decoration:none">QUEM SOMOS</a>
+                            <a href="/oquefazemos" class="w3-bar-item w3-button" style="text-decoration:none">O QUE FAZEMOS</a>
+                            <a href="/contacto" class="w3-bar-item w3-button" style="text-decoration:none">CONTACTO</a>
+                            <a href="/ondeEstamos" class="w3-bar-item w3-button" style="text-decoration:none">ONDE ESTAMOS</a>
                         </div>
                     </div>
                 </div>
@@ -46,33 +42,71 @@
     <div class="row">
       <div class="col-sm 2"></div>
       <div class="col-md 1">
-        <a href="portfolio/identidadevisual"><img src="images/identidadeVisual.png" class="tamanho" onmouseover="this.src='images/circuloCinza.png'" onmouseout="this.src='images/identidadeVisual.png'" alt="identidadeVisual"></a>
-        <b style=" text-align: center;">EHEHE</b>
+        <img src="images/identidadeVisual.png" class="tamanho" alt="identidadeVisual">
       </div>
       <div class="col-sm 1">
-        <a href="portfolio/viaturas"><img src="images/viaturas.png" class="tamanho" alt="viaturas" onmouseover="this.src='images/circuloCinza.png'" onmouseout="this.src='images/viaturas.png'"></a>
+        <img src="images/viaturas.png" class="tamanho" alt="viaturas">
       </div>
-      <div class="col-sm 1" class="texto">
-       <a href="portfolio/montras"><img src="images/montras.png" class="tamanho" alt="montras" onmouseover="this.src='images/circuloCinza.png'" onmouseout="this.src='images/montras.png'"></a> 
+      <div class="col-sm 1">
+        <img src="images/montras.png" class="tamanho" alt="montras">
       </div>
-      <div class="col-sm 1" class="texto">
-        <a href="portfolio/lonas"><img src="images/lonas.png" class="tamanho" alt="lonas" onmouseover="this.src='images/circuloCinza.png'" onmouseout="this.src='images/lonas.png'"></a>
+      <div class="col-sm 1">
+        <img src="images/lonas.png" class="tamanho" alt="lonas">
       </div>
-      <div class="col-sm 1" class="texto">
-        <a href="portfolio/placas"><img src="images/placasReclamos.png" class="tamanho" alt="placasReclamos" onmouseover="this.src='images/circuloCinza.png'" onmouseout="this.src='images/placasReclamos.png'"></a>
+      <div class="col-sm 1">
+        <img src="images/placasReclamos.png" class="tamanho" alt="placasReclamos">
       </div>
-      <div class="col-sm 1" class="texto">
-        <a href="portfolio/sinaletica"><img src="images/sinaletica.png" class="tamanho" alt="sinaletica" onmouseover="this.src='images/circuloCinza.png'" onmouseout="this.src='images/sinaletica.png'"></a>
+      <div class="col-sm 1">
+        <img src="images/sinaletica.png" class="tamanho" alt="montras">
       </div>
-      <div class="col-sm 1" class="texto">
-        <a href="portfolio/texteis"><img src="images/texteis.png" class="tamanho" alt="texteis" onmouseover="this.src='images/circuloCinza.png'" onmouseout="this.src='images/texteis.png'"></a>
+      <div class="col-sm 1">
+        <img src="images/texteis.png" class="tamanho" alt="texteisis">
       </div>
-      <div class="col-sm 1" class="texto">
-        <a href="portfolio/bandeiras"><img src="images/bandeiras.png" class="tamanho" alt="bandeiras" onmouseover="this.src='images/circuloCinza.png'" onmouseout="this.src='images/bandeiras.png'"></a>
+      <div class="col-sm 1">
+        <img src="images/bandeiras.png" class="tamanho" alt="bandeiras">
       </div>
       <div class="col-sm 2"></div>
-    </div>
+    </div>  
     <br>
+    <div class="row">
+      <div class="col-sm 2"></div>
+      <div class="col-md 1">
+        <h6>IDENTIDADE VISUAL</h6>
+      </div>
+      <div class="col-sm 1">
+        <h6>VIATURAS</h6>
+      </div>
+      <div class="col-sm 1">
+        <h6>MONTRAS</h6>
+      </div>
+      <div class="col-sm 1">
+        <h6>LONAS/EXPOSITORES</h6>
+      </div>
+      <div class="col-sm 1">
+        <h6>PLACAS/RECLAMOS</h6>
+      </div>
+      <div class="col-sm 1">
+        <h6>SINALÉTICA</h6>
+      </div>
+      <div class="col-sm 1">
+        <h6>TEXTEIS</h6>
+      </div>
+      <div class="col-sm 1">
+        <h6>BANDEIRAS</h6>
+      </div>
+      <div class="col-sm 2"></div>
+    </div> 
+
+
+    <br><br>
+    <div class="div">
+      <br>
+      @foreach ($all as $item)
+        <img src="{{asset('/portfolio/'.$item->imagem)}}" alt="imagem" class="sizeImagem" style="position: relative;">
+      @endforeach
+      <br>
+    </div>
+    <br><br>
     <div class="footer">
       <br>
         <div class="container">

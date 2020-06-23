@@ -5,10 +5,14 @@
   border-left: 1px solid #c0d80f;
   height: 650px;  
 }
-.imagem{
+#logo{
   margin-top: 2%;
   margin-left: 4%;
+  height: 8%;
+  width: 8%;
 }
-.texto{
+#texto{
   margin-top: 8%;
+  font-size: 2vw;
 }
+html {font-size: 2vw;}
