@@ -11,20 +11,20 @@
     <title>Quem Somos</title>
   </head>
   <body>
-    <a href="/"><img src="images/logo.png" class="imagem" alt="logo" height="90"></a>
+    <a href="/"><img src="images/logo.png" alt="logo" id="logo"></a>
     <section>
       <br><br><br>
       <div class="container-fluid; margem">
         <div class="row">
           <div class="col-md-8">
-            <h4 class="texto">
+            <p id="texto">
               Nos nossos dias nenhuma empresa qualquer que seja o seu sector de actividade, pode descurar uma profunda <br> preocupação com a sua imagem, bem como a sua publicidade. <br><br>
               Hoje, só antecipando-se à progressiva evolução dos padrões de exigência a níveis de desempenho e <br> fiabilidade, é possível inspirar cada vez mais confiança aos seus clientes. <br>
               O seu produto ou serviço deve despertar as associações correctas, informando e impulsionando a compra, visita <br> ou a sua divulgação. <br><br>
               Existe toda uma série de regras, escritas na publicidade: o grafismo, a imagem, a forma, a <br> harmonia e a psicologia das cores. <br><br>
               A <strong>mude d'ideias</strong>, dá-lhe toda a excelência de serviços que satisfaçam os requisitos das nosso clientes. <br> 
               Quando se exige qualidade e criatividade, aceita-se um desafio de igual para igual.
-            </h4>
+            </p>
           </div>
           <div class="col-md-1; linha"></div>
           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;

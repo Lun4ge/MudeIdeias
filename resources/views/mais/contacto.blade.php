@@ -11,32 +11,32 @@
     <title>Contacto</title>
   </head>
   <body>
-    <a href="/"><img src="images/logo.png" class="imagem" alt="logo" height="90"></a>
+    <a href="/"><img src="images/logo.png" class="imagem" alt="logo" id="logo"></a>
     <section>
       <br><br><br>
       <div class="container; margem">
         <div class="row">
           <div class="col-md-8">
-            <h6 class="margem2">
+            <p class="margem2" id="texto">
               <img src="images/telefone.png" alt="telefone" height="30">&nbsp;&nbsp;(+351) 91 405 94 72 <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (+351) 243 581 581 <br><br>
               <img src="images/correio.png" alt="correio" height="30">&nbsp;&nbsp;geral@mudedideias.com <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; mudedideias@gmail.com <br><br>
               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Segunda a Sexta-Feira das <strong>9h00</strong> às <strong>13h00</strong> | <strong>14h30</strong> às <strong>18h30</strong>
-            </h6>
+            </p>
             <center><hr style="height:1px;color:#c0d80f;background-color:#c0d80f" width="55%"></center>
-            <div class="container; margem3">
+            <div class="container">
               <form>
-                <h3>PODEMOS AJUDAR</h3>
-                <div class="form-group">  
-                  {{--<h6><label for="exampleInputEmail1">Nome:</label></h6>--}}
-                  <h5><input type="text" class="tamanhoInput1" id="Nome" placeholder="Nome"></h5>
+                <h3 class="margem3" id="titulo">PODEMOS AJUDAR</h3><br>
+                <div class="form-group; margem3">  
+                  <h5><label for="exampleInputEmail1" id="Nome">Nome:</label>
+                  <input type="text" class="tamanhoInput1" id="Nome"></h5>
                 </div>
-                <div class="form-group">
-                  {{--<h6><label for="tituloMensagem">Titulo da Mensagem:</label></h6>--}}
-                  <h5><input type="text" class="tamanhoInput2" id="tituloMensagem" placeholder="Titulo da Mensagem"></h5>
+                <div class="form-group; margem4">
+                  <h5><label for="tituloMensagem" id="tituloMensagem">Titulo:</label>
+                  <input type="text" class="tamanhoInput2" id="tituloMensagem"></h5>
                 </div>
-                <div class="form-group">
-                  {{--<h6><label for="Mensagem">Mensagem:</label></h6>--}}
-                  <h5><textarea id="w3mission" rows="5" class="tamanhoInput3" id="Mensagem" placeholder="Mensagem"></textarea></h5>
+                <div class="form-gro; margem5">
+                  <h5><label for="Mensagem" class="vertical" id="Mensagem">Mensagem:</label>
+                  <textarea id="w3mission" rows="5" class="tamanhoInput3" id="Mensagem"></textarea></h5>
                 </div>
                 <button type="submit" class="botao">Enviar</button>
               </form>
