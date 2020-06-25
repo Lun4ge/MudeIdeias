@@ -6,14 +6,9 @@ use App\Orcamentosenviados;
 use Illuminate\Support\Facades\Mail;
 
 
-<<<<<<< Updated upstream
-Route::get('/', function () {
-    return view('index');
-});
-=======
+
 Route::get('/', 'backOffice@home');
 Route::get('/home', 'backOffice@home');
->>>>>>> Stashed changes
 
 Route::get('/quemsomos', function () {
     return view('mais.quemsomos');
