@@ -5,6 +5,11 @@
     width: 100%;
     height: auto;
 }
+
+.texto{
+    text-align: center;
+}
+
 .footer { 
     left: 0;
     bottom: 0;
@@ -13,23 +18,7 @@
     color: black;
     text-align: left;
 }
-<<<<<<< Updated upstream
-.redesSociais{
-    float: right;    
-    margin: 1%;
-}
-/*.zoom {
-    padding: 5%;
-    transition: transform .2s;
-    margin: 0 auto;
-  }
-.zoom:hover {
-    -ms-transform: scale(1.5);
-    -webkit-transform: scale(1.5);
-    transform: scale(1.5); 
-}*/
-=======
->>>>>>> Stashed changes
+
 .div{
     width: 80%;
     background-color: lightgrey;
@@ -174,4 +163,5 @@ h6{
 #eight.show {
     display: block;
 }
-html { font-size: 0.75vw; }
+html { font-size: 0.75vw; }*/
+

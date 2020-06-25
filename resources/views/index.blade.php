@@ -30,6 +30,7 @@
                             <a href="/oquefazemos" class="w3-bar-item w3-button" style="text-decoration:none">O QUE FAZEMOS</a>
                             <a href="/contacto" class="w3-bar-item w3-button" style="text-decoration:none">CONTACTO</a>
                             <a href="/ondeEstamos" class="w3-bar-item w3-button" style="text-decoration:none">ONDE ESTAMOS</a>
+                            <a href="/pedidos/criar" class="w3-bar-item w3-button" style="text-decoration:none">ORÇAMENTOS</a>
                         </div>
                     </div>
                 </div>
