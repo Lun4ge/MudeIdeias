@@ -27,22 +27,7 @@
         <tr>
           <th scope="row" class="tabelaMarcasText">{{$item->id}}</th>
           <td class="tabelaMarcasText">{{$item->nome}}</td>
-          <td>
-
-
-            {{-- <form method="POST" action="{{url('marcas/{{$item->id}}/edit')}}" enctype="multipart/form-data"> 
-              @csrf
-              <input type="text" id="nome" name="nome" value="{{$item->nome}}" maxlength="25" size="25">
-              <button type="file" value="X" class="btn tabelaMarcasDelete"><i class="fas fa-trash"></i></button>
-              <label for="fusk" class="btn tabelaMarcasDelete"><i class="fas fa-trash"></i></label>
-              <input id="fusk" type="file" name="imagem" style="display: none;">
-              <input type="submit" value="Criar" class="btn confirmButton">
-              <i class="fas fa-check"></i>
-              <i class="fas fa-ban"></i>
-            </form> --}}
-
-
-          </td>
+          <td></td>
           <td>
             <form action="/marcas/{{$item->id}}" method="POST">
               <button onClick="window.location.href='/marcas/{{$item->id}}/edit'" class="btn tabelaMarcasEdit" type="button"><i class="fas fa-pen"></i></button>
@@ -56,4 +41,18 @@
     </tbody>
         </table>  
       </div>
+
+        <div>
+            {{-- <form method="POST" action="{{url('marcas/{{$item->id}}/edit')}}" enctype="multipart/form-data"> 
+              @csrf
+              <input type="text" id="nome" name="nome" value="{{$item->nome}}" maxlength="25" size="25">
+              <button type="file" value="X" class="btn tabelaMarcasDelete"><i class="fas fa-trash"></i></button>
+              <label for="fusk" class="btn tabelaMarcasDelete"><i class="fas fa-trash"></i></label>
+              <input id="fusk" type="file" name="imagem" style="display: none;">
+              <input type="submit" value="Criar" class="btn confirmButton">
+              <i class="fas fa-check"></i>
+              <i class="fas fa-ban"></i>
+            </form> --}}
+        </div>
+        
 @endsection
