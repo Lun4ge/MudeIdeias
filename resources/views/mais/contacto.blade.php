@@ -27,16 +27,20 @@
               <form method="POST" action="{{url('mensagens/criar')}}" enctype="multipart/form-data">
                 <h3 class="margem3" id="titulo">PODEMOS AJUDAR</h3><br>
                 <div class="form-group; margem3">  
-                  <h5><label for="exampleInputEmail1" id="Nome">Nome:</label>
+                  <h5><label for="Nome" id="Nome">Nome:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
                   <input type="text" class="tamanhoInput1" id="Nome"></h5>
                 </div>
-                <div class="form-group; margem4">
-                  <h5><label for="tituloMensagem" id="tituloMensagem">Titulo:</label>
-                  <input type="text" class="tamanhoInput2" id="tituloMensagem"></h5>
+                <div class="form-group; margem4">  
+                  <h5><label for="Email" id="Email">E-mail:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                  <input type="text" class="tamanhoInput2" id="Email"></h5>
                 </div>
-                <div class="form-gro; margem5">
-                  <h5><label for="Mensagem" class="vertical" id="Mensagem">Mensagem:</label>
-                  <textarea id="w3mission" rows="5" class="tamanhoInput3" id="Mensagem"></textarea></h5>
+                <div class="form-group; margem5">
+                  <h5><label for="tituloMensagem" id="tituloMensagem">Titulo:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                  <input type="text" class="tamanhoInput3" id="tituloMensagem"></h5>
+                </div>
+                <div class="form-gro; margem6">
+                  <h5><label for="Mensagem" class="vertical" id="Mensagem">Mensagem:&nbsp;&nbsp;</label>
+                  <textarea id="w3mission" rows="5" class="tamanhoInput4" id="Mensagem"></textarea></h5>
                 </div>
                 <button type="submit" class="botao">Enviar</button>
               </form>

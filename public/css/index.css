@@ -18,19 +18,6 @@
     color: black;
     text-align: left;
 }
-.redesSociais{
-    float: right;    
-    margin: 1%;
-}
-/*.zoom {
-    padding: 5%;
-    transition: transform .2s;
-    margin: 0 auto;
-  }
-.zoom:hover {
-    -ms-transform: scale(1.5);
-    -webkit-transform: scale(1.5);
-    transform: scale(1.5); 
 
 .div{
     width: 80%;
@@ -42,7 +29,139 @@ h6{
     color: grey;
 }
 .sizeImagem{
-    
+    /*height: 250px;
+    width: 450px;*/
+    width: 25.1%;
+    margin-left: -0.3%;
+}
+#telefone{
+    height: 2.5%;
+    width: 2.5%;
+}
+#redesSociais{
+    float: right;    
+    margin: 1%;
+    height: 9%;
+    width: 9%;
+}
+#correio{
+    height: 2.5%;
+    width: 2.5%;
+}
+#localizacao{
+    height: 2.5%;
+    width: 2.5%;
+}
+#imageZoom{
+    height: 100%;
+    width: 100%;
+}
+#margemZoom{
+    margin-top: 7.6%;
+}
+#img1{
+    height: 19%;
+    width: 9.5%;
+    position: absolute;
+    top: 97.5%; 
+    left: 9.7%;
+}
+#img2{
+    height: 19%;
+    width: 9.5%;
+    position: absolute;
+    top: 97.5%; 
+    left: 19.85%;
+}   
+#img3{
+    height: 19%;
+    width: 9.5%;
+    position: absolute;
+    top: 97.5%; 
+    left: 30%;
+}   
+#img4{
+    height: 19%;
+    width: 9.5%;
+    position: absolute;
+    top: 97.5%; 
+    left: 40.1%;
+}   
+#img5{
+    height: 19%;
+    width: 9.5%;
+    position: absolute;
+    top: 97.5%; 
+    left: 50.3%;
+}   
+#img6{
+    height: 19%;
+    width: 9.5%;
+    position: absolute;
+    top: 97.5%; 
+    left: 60.5%;
+}   
+#img7{
+    height: 19%;
+    width: 9.5%;
+    position: absolute;
+    top: 97.5%; 
+    left: 70.6%;
+}   
+#img8{
+    height: 19%;
+    width: 9.5%;
+    position: absolute;
+    top: 97.5%; 
+    left: 80.77%;
+}      
+#one{
+    display: none;
+}
+#one.show {
+    display: block;
+}
+#two{
+    display: none;
+}
+#two.show {
+    display: block;
+}
+#three{
+    display: none;
+}
+#three.show {
+    display: block;
+}
+#four{
+    display: none;
+}
+#four.show {
+    display: block;
+}
+#five{
+    display: none;
+}
+#five.show {
+    display: block;
+}
+#six{
+    display: none;
+}
+#six.show {
+    display: block;
+}
+#seven{
+    display: none;
+}
+#seven.show {
+    display: block;
+}
+#eight{
+    display: none;
+}
+#eight.show {
+    display: block;
 }
 html { font-size: 0.75vw; }*/
 
