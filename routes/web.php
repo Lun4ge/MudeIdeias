@@ -6,7 +6,6 @@ use App\Orcamentosenviados;
 use Illuminate\Support\Facades\Mail;
 
 
-
 Route::get('/', 'backOffice@home');
 Route::get('/home', 'backOffice@home');
 
@@ -24,12 +23,9 @@ Route::get('/ondeEstamos', function () {
     return view('mais.ondeEstamos');
 });
 
-Route::get('/ondeEstamos', function () {
-    return view('mais.ondeEstamos');
+Route::get('/pedidoOrcamentos', function () {
+    return view('pedidoOrcamentos');
 });
-
-// Route::get('/pedidoOrcamentos', function () {
-//     return view('pedidoOrcamentos');
 
 Route::get('portfolio/identidadevisual', 'backOffice@Identidade');
 Route::get('portfolio/viaturas', 'backOffice@Viaturas');
@@ -75,9 +71,7 @@ Route::group(['middleware' => ['auth']], function(){
     //       $message->to('rafaelxomega@gmail.com', 'John Doe');
     //     }); });
 
-    Route::get('/mail', function() {
-       Mail::to('rafaelxomega@gmail.com')->send(new App\Mail\enviarorcamentos);
-    });
-
+    // Route::get('/mail', function() {Mail::to('rafaelxomega@gmail.com')->send(new App\Mail\enviarorcamentos);});
+    
     });
   });

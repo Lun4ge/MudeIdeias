@@ -40,7 +40,6 @@ class backOffice extends Controller
     public function ImagemIndex()
     {       
       $all = Portfolios::select()->get();
-    // $all = Portfolios::select()->paginate(2);
       return view('admin.adicionar.imagens.imagensView')->with(compact("all"));
     }
 
@@ -52,10 +51,7 @@ class backOffice extends Controller
         ]);
         
         $data = $request->all();
-        // if($data['marca']!='' && ($data['tipo']==''||$data['tipo']==''||$data['tipo']==''||$data['tipo']==''))
-        // {
-          
-        // }
+        // if($data['marca']!='' && ($data['tipo']==''||$data['tipo']==''||$data['tipo']==''||$data['tipo']=='')){}
 
         $imagens = new Portfolios();
         $imagens->tipo=$data['tipo'];

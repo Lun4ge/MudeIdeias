@@ -49,6 +49,15 @@ div.menu a{
   white-space:nowrap
 }
 
+.menuImagem{
+  background-color: #2e2e2d;
+  color: white;
+}
+
+.menuImagem:hover{
+  background-color: #696969;
+}
+
 .ButtonMenu:hover{
 color: #757573;
 }
@@ -78,10 +87,14 @@ color: #757573;
   color: white;
 }
 
+.tabelaMarcasEstado:hover{
+  color: #c0d80f;
+}
+
 .tabelaMarcasDelete{
   background-color: #2e2e2d;
   color: white;
-  padding: -5%;
+  /* padding: -5%; */
  }
 
 .tabelaMarcasDelete:hover{
@@ -123,8 +136,8 @@ color: #c9c9c9;
 }
 
 .confirmButton:hover{
-  background-color: #303030;
-  color: #c9c9c9;
+  background-color: #696969;
+  color: #c0d80f;
 }
 
 #AdicionarMarca{
