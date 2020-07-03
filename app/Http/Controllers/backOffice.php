@@ -11,8 +11,10 @@ use App\Imagensenviados;
 use App\Mail\enviarorcamentos;
 use App\Orcamentospedidos;
 use App\Orcamentosenviados;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Mail;
-
+use Illuminate\Validation\Rules\Exists;
+use PHPUnit\Framework\MockObject\Builder\Match;
 
 use function GuzzleHttp\Promise\all;
 
@@ -40,7 +42,6 @@ class backOffice extends Controller
     public function ImagemIndex()
     {       
       $all = Portfolios::select()->get();
-    // $all = Portfolios::select()->paginate(2);
       return view('admin.adicionar.imagens.imagensView')->with(compact("all"));
     }
 
@@ -52,10 +53,7 @@ class backOffice extends Controller
         ]);
         
         $data = $request->all();
-        // if($data['marca']!='' && ($data['tipo']==''||$data['tipo']==''||$data['tipo']==''||$data['tipo']==''))
-        // {
-          
-        // }
+        // if($data['marca']!='' && ($data['tipo']==''||$data['tipo']==''||$data['tipo']==''||$data['tipo']=='')){}
 
         $imagens = new Portfolios();
         $imagens->tipo=$data['tipo'];
@@ -253,6 +251,32 @@ class backOffice extends Controller
         
         return redirect('/marcas');
        }
+
+       public function MarcaEdit($id)
+       {
+        $all = Marcas::select()->get();
+        $only = Marcas::where(['id'=>$id])->first();
+        return view('admin.adicionar.marcas.marcasEdit')->with(compact("all","only"));
+       }
+
+       public function MarcaSave($id,Request $request)
+       {
+        $request->validate([
+            'nome' => 'required|unique:marcas',
+        ]);
+        $data = $request->all();
+
+        Marcas::where(['id'=>$id])->update([
+            'nome'=>$data['nome']]);
+            return redirect('/marcas');
+       }
+
+       public function MarcaDelete($id)
+       {
+        $all = Marcas::select()->get();
+        $only = Marcas::where(['id'=>$id])->first();
+        return view('admin.adicionar.marcas.marcasDelete')->with(compact("all","only"));
+       }
    
        public function MarcaDestroy($id)
        {
@@ -272,21 +296,30 @@ class backOffice extends Controller
     
         public function MensagemStore(Request $request)
         {
-            $request->validate([
-                'Nome' => 'required',
-                'Email'=>'required',
-                'tituloMensagem' =>'required',
-                'Mensagem'=>'required',
-            ]);
+            if(Auth::check()){
+                $request->validate([
+                    'Nome' => 'required',
+                    'tituloMensagem' =>'required',
+                    'Mensagem'=>'required',
+                ]);
+            }
+            else{
+                $request->validate([
+                    'Nome' => 'required',
+                    'Email'=>'required',
+                    'tituloMensagem' =>'required',
+                    'Mensagem'=>'required',
+                ]);}
             
             $data = $request->all();
             $contacto = new Contactos();
             $contacto->nome=$data['Nome'];
-            $contacto->email=$data['Email'];
             $contacto->titulo=$data['tituloMensagem'];
             $contacto->mensagem=$data['Mensagem'];
+            if(Auth::check()){$contacto->email=auth()->user()->email;}
+            else{$contacto->email=$data['Email'];}
+
             $contacto->save();
-            
             return redirect('/contacto');
         }
     
