@@ -103,9 +103,7 @@
     <div class="div">
       <br>
       @foreach ($all as $item)
-<<<<<<< Updated upstream
-        <img src="{{asset('/portfolio/'.$item->imagem)}}" alt="imagem" class="sizeImagem" style="position: relative;">
-=======
+
         <img src="{{asset('/portfolio/'.$item->imagem)}}" alt="imagem" class="sizeImagem" style="position: relative;" onclick="document.getElementById('id{{$item->id}}').style.display='block'">
         
     <div id="id{{$item->id}}" class="w3-modal">
@@ -116,7 +114,6 @@
             </div>
           </div>
         </div>
->>>>>>> Stashed changes
       @endforeach
       <br>
     </div>

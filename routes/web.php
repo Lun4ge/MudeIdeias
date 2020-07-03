@@ -48,7 +48,10 @@ Route::group(['middleware' => ['auth']], function(){
 
       Route::get('marcas', 'backOffice@MarcaIndex');
       Route::post('marcas/criar', 'backOffice@MarcaStore');
+      Route::get('marcas/{id}/delete', 'backOffice@MarcaDelete');
       Route::delete('marcas/{id}', 'backOffice@MarcaDestroy');
+      Route::get('marcas/{id}/edit', 'backOffice@MarcaEdit');
+      Route::post('marcas/{id}/edit', 'backOffice@MarcaSave');
 
       Route::get('imagens', 'backOffice@ImagemIndex');
       Route::post('imagens/criar', 'backOffice@ImagemStore');
