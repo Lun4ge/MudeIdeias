@@ -25,22 +25,22 @@
             <center><hr style="height:1px;color:#c0d80f;background-color:#c0d80f" width="55%"></center>
             <div class="container">
               <form method="POST" action="{{url('mensagens/criar')}}" enctype="multipart/form-data">
-                <h3 class="margem3" id="titulo">PODEMOS AJUDAR</h3><br>
+                <h3 id="titulo">PODEMOS AJUDAR</h3><br>
                 <div class="form-group; margem3">  
-                  <h5><label for="Nome" id="Nome">Nome:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
-                  <input type="text" class="tamanhoInput1" id="Nome"></h5>
+                  <p><label for="Nome" id="Nome">Nome:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                  <input type="text" class="tamanhoInput1" id="Nome"></p>
                 </div>
                 <div class="form-group; margem4">  
-                  <h5><label for="Email" id="Email">E-mail:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
-                  <input type="text" class="tamanhoInput2" id="Email"></h5>
+                  <p><label for="Email" id="Email">E-mail:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                  <input type="text" class="tamanhoInput2" id="Email"></p>
                 </div>
                 <div class="form-group; margem5">
-                  <h5><label for="tituloMensagem" id="tituloMensagem">Titulo:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
-                  <input type="text" class="tamanhoInput3" id="tituloMensagem"></h5>
+                  <p><label for="tituloMensagem" id="tituloMensagem">Titulo:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                  <input type="text" class="tamanhoInput3" id="tituloMensagem"></p> 
                 </div>
                 <div class="form-gro; margem6">
-                  <h5><label for="Mensagem" class="vertical" id="Mensagem">Mensagem:&nbsp;&nbsp;</label>
-                  <textarea id="w3mission" rows="5" class="tamanhoInput4" id="Mensagem"></textarea></h5>
+                  <p><label for="Mensagem" class="vertical" id="Mensagem">Mensagem:&nbsp;&nbsp;</label>
+                  <textarea id="w3mission" rows="5" class="tamanhoInput4" id="Mensagem"></textarea></p>
                 </div>
                 <button type="submit" class="botao">Enviar</button>
               </form>

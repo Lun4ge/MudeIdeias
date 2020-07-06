@@ -194,22 +194,12 @@
       <div class="col-sm 2"></div>
     </div> 
     <br><br>
-    <div class="div">
+    {{--<div class="div">
       @foreach ($all as $item)
-        <img src="{{asset('/portfolio/'.$item->imagem)}}" alt="imagem" class="sizeImagem" style="position: relative;" onclick="document.getElementById('id' + $item->id).style.display='block'">
-        
-        <div id="id" class="w3-modal">
-          <div class="w3-modal-content" id="assetmargemZoom">
-            <span onclick="document.getElementById('id' + $item->id).style.display='none'" class="w3-button w3-display-topright">&times;</span>
-            <div>
-              <img src="{{asset('/portfolio/'.$item->imagem)}}" alt="imagem" id="imageZoom">
-            </div>
-          </div>
-        </div>
+        <img src="{{asset('/portfolio/'.$item->imagem)}}" alt="imagem" class="sizeImagem" style="position: relative;">
       @endforeach
-      
       <br>
-    </div>
+    </div>--}}
     <br><br>
     <div class="footer">
       <br>

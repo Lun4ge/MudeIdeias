@@ -1,6 +1,12 @@
 a{
     color: black;
     font-size: 1vw;
+    background-color: transparent;
+}
+a:hover{
+    color: #c0d80f;
+    font-size: 1vw;
+    background-color: transparent;
 }
 .anos{
     height: 100%;
