@@ -100,7 +100,8 @@ class backOffice extends Controller
     public function PedidoIndex()
     {
         $all = Orcamentospedidos::select()->get();
-        return view('admin.visualizar.pedidos.pedidosView')->with(compact("all"));
+        $allimgs = Imagenspedidos::select()->get();
+        return view('admin.visualizar.pedidos.pedidosView')->with(compact("all","allimgs"));
     }
 
     public function PedidoIndexIndi($id)
@@ -214,7 +215,7 @@ class backOffice extends Controller
             {
                 // Mail::to('rafaelxomega@gmail.com')->send(new enviarorcamentos);
             }
-            Mail::to('rafaelxomega@gmail.com')->send(new enviarorcamentos);
+            // Mail::to('rafaelxomega@gmail.com')->send(new enviarorcamentos);
             return redirect('pedidos');
        }
    
