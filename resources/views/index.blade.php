@@ -88,7 +88,7 @@
       <div class="col-sm 2"></div>
     </div>
     <br>
-    <div class="row" style="margin-left: 0.3%">
+    <div class="row" style="margin-left: 0.3%; margin-top: 1%">
       <div class="col-sm 2"></div>
       <div class="col-md 1" style="margin-left: 1%">
         <h6>IDENTIDADE VISUAL</h6>
