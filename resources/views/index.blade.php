@@ -12,15 +12,15 @@
     <nav class="navbar navbar-expand-lg navbar-light">
       <div class="container">
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav mr-auto">
+          <ul class="navbar-nav mr-auto" >
             <img src="{{asset('images/logo.png')}}" alt="logo" height="60"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <img src="{{asset('images/20anos.png')}}" class="imagem" alt="20anos" height="25">
           </ul>
         </div>
         <ul class="navbar-nav ml-auto">
             <div class="row">
-                <div class="col-sm-10">
-                    <h6><br>(+351) 91 406 94 72 | (+351) 243 581 581 | geral@mudedideias.com <br> <font style="color:#c0d80f">Soluções para publicidade!</font></h6>
+                <div class="col-sm-8" style="margin-left: -2%">
+                    <h6><br><br>(+351) 91 406 94 72 | (+351) 243 581 581 | geral@mudedideias.com <br> <font style="color:#c0d80f">Soluções para publicidade!</font></h6>
                 </div>
                 <div class="col-sm-2">
                     <div class="w3-dropdown-hover">
@@ -33,6 +33,9 @@
                             <a href="/pedidos/criar" class="w3-bar-item w3-button" style="text-decoration:none">ORÇAMENTOS</a>
                         </div>
                     </div>
+                </div>
+                <div class="col-sm-1" style="margin-left: -3%">
+                  <a href="/register"><img src="{{asset('images/register.png')}}" alt="register" height="60%" style="margin-top: 30%"></a>
                 </div>
             </div>
           </ul>
@@ -85,18 +88,18 @@
       <div class="col-sm 2"></div>
     </div>
     <br>
-    <div class="row">
+    <div class="row" style="margin-left: 0.3%">
       <div class="col-sm 2"></div>
       <div class="col-md 1" style="margin-left: 1%">
         <h6>IDENTIDADE VISUAL</h6>
       </div>
-      <div class="col-sm 1" style="margin-left: 0.5%">
+      <div class="col-sm 1" style="margin-left: 0.3%">
         <h6>VIATURAS</h6>
       </div>
-      <div class="col-sm 1">
+      <div class="col-sm 1" style="margin-left: 0.4%">
         <h6>MONTRAS</h6>
       </div>
-      <div class="col-sm 1" style="margin-left: 0.5%">
+      <div class="col-sm 1" style="margin-left: 0.4%">
         <h6>LONAS/EXPOSITORES</h6>
       </div>
       <div class="col-sm 1" style="margin-left: 0.5%">
@@ -105,21 +108,21 @@
       <div class="col-sm 1" style="margin-left: 0.5%">
         <h6>SINALÉTICA</h6>
       </div>
-      <div class="col-sm 1">
+      <div class="col-sm 1"style="margin-left: 0.3%">
         <h6>TEXTEIS</h6>
       </div>
-      <div class="col-sm 1">
+      <div class="col-sm 1" style="margin-left: 0.3%">
         <h6>BANDEIRAS</h6>
       </div>
-      <div class="col-sm 2"></div>
+      <div class="col-sm 1"></div>
     </div> 
     <br><br>
-    {{--<div class="div">
+    <div class="div">
       @foreach ($all as $item)
         <img src="{{asset('/portfolio/'.$item->imagem)}}" alt="imagem" class="sizeImagem" style="position: relative;">
       @endforeach
       <br>
-    </div>--}}
+    </div>
     <br><br>
     <div class="footer">
       <br>
