@@ -15,6 +15,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Validation\Rules\Exists;
 use PHPUnit\Framework\MockObject\Builder\Match;
+use App\User;
 
 use function GuzzleHttp\Promise\all;
 
@@ -101,7 +102,8 @@ class backOffice extends Controller
     {
         $all = Orcamentospedidos::select()->get();
         $allimgs = Imagenspedidos::select()->get();
-        return view('admin.visualizar.pedidos.pedidosView')->with(compact("all","allimgs"));
+        $alluser = User::select()->get();
+        return view('admin.visualizar.pedidos.pedidosView')->with(compact("all","allimgs","alluser"));
     }
 
     public function PedidoIndexIndi($id)
@@ -109,7 +111,8 @@ class backOffice extends Controller
         $all = Orcamentospedidos::select()->get();
         $onlyim = Imagenspedidos::where(['orcamentoid'=>$id])->get();
         $only = Orcamentospedidos::where(['id'=>$id])->first();
-        return view('admin.visualizar.pedidos.pedidosUnico')->with(compact("all","only","onlyim"));
+        $alluser = User::select()->get();
+        return view('admin.visualizar.pedidos.pedidosUnico')->with(compact("all","only","onlyim","alluser"));
     }
 
     public function PedidoCreate()
@@ -119,6 +122,7 @@ class backOffice extends Controller
 
     public function PedidoStore(Request $request)
     {
+        $check = 0;
         $request->validate([
             'tituloMensagem' => 'required',
             'Mensagem' => 'required',
@@ -130,11 +134,20 @@ class backOffice extends Controller
         $pedidos->mensagem=$data['Mensagem'];
         $pedidos->estado='Por Responder';
         $pedidos->userid=Auth()->user()->id;
-        $pedidos->save();
 
-        $pedidoCriado = $pedidos->id;
         if($request->hasFile('imagem')) 
         {
+            if( count($request->file('imagem')) > 5)
+            {
+                return back();
+            }
+            else{
+                $pedidos->save();
+                $pedidoCriado = $pedidos->id;
+                $check = 1;
+            }
+
+
             $cont = 1;
             foreach($request->file('imagem') as $file)
             {
@@ -150,6 +163,9 @@ class backOffice extends Controller
             }
         }
 
+        if($check == 0){
+            $pedidos->save();
+        }
         return back();
     }
 

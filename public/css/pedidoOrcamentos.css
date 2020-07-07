@@ -6,6 +6,12 @@ h2{
   text-align: right;
 }
 
+.logo{
+  margin-top: 2%;
+  margin-left: 4%;
+  height: 8%;
+  width: 8%;
+}
 
 .botao{
   background-color: grey;
@@ -36,6 +42,8 @@ h2{
   padding-right: 7%;
   padding-top: 4%;
   padding-bottom: 4%;
+  margin-left: 28%;
+  cursor:pointer;
 }
 
 .upload:hover{

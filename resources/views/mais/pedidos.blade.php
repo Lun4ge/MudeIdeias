@@ -16,7 +16,7 @@
     <title>Pedido de Orçamentos</title>
   </head>
   <body>
-    <a href="/"><img src="{{asset('images/logo.png')}}" class="imagem" alt="logo" height="90"></a>
+    <a href="/"><img src="{{asset('images/logo.png')}}" class="logo" alt="logo" id="logo"></a>
     <div class="container">
       <h2>PEDIDO DE <br> ORÇAMENTOS</h2><br>
       <form method="POST" action="{{url('pedidos/criar')}}" enctype="multipart/form-data">
@@ -42,20 +42,9 @@
           <div class="col-75"></div>
           <div class="col-25a">
             <div class="form-group row">
-            {{-- <button type="file" class="upload" style="margin-left: 28%;"><i class="fas fa-upload"></i></button> --}}
 
-               <label class="upload" style="margin-left: 28%;  background-color: #c0d80f;
-               color: gray;
-               border: none;
-               border-radius: 4px;
-             
-               padding-left: 8%;
-               padding-right: 8%;
-               /* padding-top: 6%;
-               padding-bottom: 6%; */
-               height:100%;">
-               {{-- Nao funciona com css ... --}}
-                 <i class="fas fa-upload"></i><input type="file" style="display: none;" name="imagem[]" multiple> 
+               <label class="upload" title="No máximo 5 ficheiros.">
+                 <i class="fas fa-upload"></i><input type="file" style="display: none;" class="fileinput" name="imagem[]" multiple> 
                   </label> 
 
           <button type="submit" class="botao"><b>Enviar</b></button>
@@ -65,7 +54,6 @@
 
       </form>
     </div>
-
 
  <div style="margin-top:5%;">
     @include('layouts/footer')

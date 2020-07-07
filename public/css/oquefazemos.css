@@ -14,12 +14,14 @@
   border-left: 1px solid #c0d80f;
   height: 280px;
 }
+
 #logo{
   margin-top: 2%;
   margin-left: 4%;
   height: 8%;
   width: 8%;
 }
+
 .p1{
   font-size: 0.80vw;
 }
