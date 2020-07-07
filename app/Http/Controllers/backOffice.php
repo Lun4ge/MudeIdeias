@@ -15,6 +15,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Validation\Rules\Exists;
 use PHPUnit\Framework\MockObject\Builder\Match;
+use App\User;
 
 use function GuzzleHttp\Promise\all;
 
@@ -100,7 +101,9 @@ class backOffice extends Controller
     public function PedidoIndex()
     {
         $all = Orcamentospedidos::select()->get();
-        return view('admin.visualizar.pedidos.pedidosView')->with(compact("all"));
+        $allimgs = Imagenspedidos::select()->get();
+        $alluser = User::select()->get();
+        return view('admin.visualizar.pedidos.pedidosView')->with(compact("all","allimgs","alluser"));
     }
 
     public function PedidoIndexIndi($id)
@@ -108,7 +111,9 @@ class backOffice extends Controller
         $all = Orcamentospedidos::select()->get();
         $onlyim = Imagenspedidos::where(['orcamentoid'=>$id])->get();
         $only = Orcamentospedidos::where(['id'=>$id])->first();
-        return view('admin.visualizar.pedidos.pedidosUnico')->with(compact("all","only","onlyim"));
+        $alluser = User::select()->get();
+        $allimgs = Imagenspedidos::select()->get();
+        return view('admin.visualizar.pedidos.pedidosUnico')->with(compact("all","only","onlyim","alluser","allimgs"));
     }
 
     public function PedidoCreate()
@@ -118,6 +123,7 @@ class backOffice extends Controller
 
     public function PedidoStore(Request $request)
     {
+        $check = 0;
         $request->validate([
             'tituloMensagem' => 'required',
             'Mensagem' => 'required',
@@ -129,11 +135,20 @@ class backOffice extends Controller
         $pedidos->mensagem=$data['Mensagem'];
         $pedidos->estado='Por Responder';
         $pedidos->userid=Auth()->user()->id;
-        $pedidos->save();
 
-        $pedidoCriado = $pedidos->id;
         if($request->hasFile('imagem')) 
         {
+            if( count($request->file('imagem')) > 5)
+            {
+                return back();
+            }
+            else{
+                $pedidos->save();
+                $pedidoCriado = $pedidos->id;
+                $check = 1;
+            }
+
+
             $cont = 1;
             foreach($request->file('imagem') as $file)
             {
@@ -149,12 +164,16 @@ class backOffice extends Controller
             }
         }
 
+        if($check == 0){
+            $pedidos->save();
+        }
         return back();
     }
 
     public function PedidoDestroy($id)
     {
-      
+        Orcamentospedidos::where(['id'=>$id])->delete();
+        return back();
     }
 
    /////////////////////////////////////////////////////
@@ -163,7 +182,11 @@ class backOffice extends Controller
 
        public function EnviadoIndex()
        {
-        return view('admin.visualizar.enviados.enviadosView');
+        $all = Orcamentosenviados::select()->get();
+        $allpedidos = Orcamentospedidos::where(['estado'=>"Respondido"])->get();
+        $allimgs = Imagensenviados::select()->get();
+        $alluser = User::select()->get();
+        return view('admin.visualizar.enviados.enviadosView')->with(compact("all","allimgs","alluser","allpedidos"));
        }
 
        public function EnviadoStore($id,Request $request)
@@ -189,7 +212,7 @@ class backOffice extends Controller
                 $cont = 1;
                 foreach($request->file('ficheiro') as $file)
                 {
-                    $imagens = new Imagensenviados();
+                    $imagens = new Imagensenviados;
                     $imgname = time(). $cont .'.'. $file->getClientOriginalExtension();
                     $path = public_path('/imagensenviadas');
                     $file->move($path,$imgname);
@@ -209,13 +232,16 @@ class backOffice extends Controller
 
                 //    $message->from('automailmudedideias@gmail.com');
                 // });
-                
             }else
             {
                 // Mail::to('rafaelxomega@gmail.com')->send(new enviarorcamentos);
             }
-            Mail::to('rafaelxomega@gmail.com')->send(new enviarorcamentos);
-            return redirect('pedidos');
+            // Mail::to('rafaelxomega@gmail.com')->send(new enviarorcamentos);
+
+            Orcamentospedidos::where(['id'=>$id])->update([
+                'estado'=>"Respondido"]);
+
+            return redirect('/pedidos');
        }
    
        public function EnviadoDestroy($id)

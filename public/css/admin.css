@@ -1,8 +1,41 @@
+
+.resposta {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  background-color: white;
+  overflow-x: hidden;
+  padding-top: 60px;
+  transition: 0.5s;
+}
+
+.btnresponder{
+  padding-left: 7%;
+  padding-right: 7%;
+  padding-top: 5%;
+  padding-bottom: 5%;
+  border:none;
+  background-color: #c0d80f;
+  color: #757573;
+}
+
+#logo{
+  margin-top: 2%;
+  margin-left: 4%;
+}
+
+.btnresponder:hover{
+  background-color: #9bad0c;
+  color: white;
+}
+
 .mensagemClick{
  padding-top: 2%;
  padding-bottom: 2%;
  width: 100%;
- height: 100%;
  background-color: #2e2e2d;
  color: white;
 }
@@ -10,6 +43,11 @@
 .mensagemClick:hover
 {
  background-color: #4f4f4d;
+}
+
+.infoboxes
+{
+  border-radius: 5px;
 }
 
 div.menu{
