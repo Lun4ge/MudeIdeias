@@ -5,6 +5,11 @@
     width: 100%;
     height: auto;
 }
+
+.texto{
+    text-align: center;
+}
+
 .footer { 
     left: 0;
     bottom: 0;
