@@ -24,26 +24,35 @@
             </p>
             <center><hr style="height:1px;color:#c0d80f;background-color:#c0d80f" width="55%"></center>
             <div class="container">
+
               <form method="POST" action="{{url('mensagens/criar')}}" enctype="multipart/form-data">
                 <p id="ajudar">PODEMOS AJUDAR</p><br>
+                
                 <div class="form-group">
                   <p><label for="Nome" id="Nome" class="nome" style="background:#c0d80f; color:white">
                     &nbsp;Nome:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
                   <input type="text" class="inputNome"></p>
                 </div>
+                
+                @guest
                 <div class="form-group">
                   <p><label for="Email" id="Email" class="email" style="background:#c0d80f; color:white">
                     &nbsp;Email:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
-                  <input type="text" class="inputEmail"></p>
+                  <input type="email" class="inputEmail" name="Email"></p>
                 </div>
+                @else
+                @endguest
+                
                 <div class="form-group">
                   <p><label for="tituloMensagem" id="tituloMensagem" class="titulo" style="background:#c0d80f; color:white">
                     &nbsp;Titulo:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
                   <input type="text" class="inputTitulo"></p>
                     </div>
+                    
                 <div class="form-group">
                   <p><label for="Mensagem" id="Mensagem" class="mensagem" style="background:#c0d80f; color:white; vertical-align:top">&nbsp;Mensagem:&nbsp;</label>
                   <textarea id="mensagem" cols="50" rows="4" class="inputMensagem"></textarea></p>
+
                 </div>
                 <button type="submit" class="botao">Enviar</button>
               </form>

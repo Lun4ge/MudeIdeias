@@ -10,7 +10,7 @@
     <form method="POST" action="{{url('imagens/criar')}}" enctype="multipart/form-data"> 
         @csrf
 
-    <input type="file" class="form-control-file" id="imagem" name="imagem">
+    <input type="file" class="form-control-file" id="imagem" name="imagem" style="margin-bottom: 1%;">
     <select class="form-control" name="tipo" id="tipo">
       <option>Identidade Visual</option>
       <option>Viaturas</option>
@@ -20,18 +20,18 @@
       <option>Sinalética</option>
       <option>Texteis</option>
       <option>Bandeiras</option>
-      <option>Carros</option>
+      {{-- <option>Carros</option>
       <option>Motas</option>
       <option>Tratores</option>
-      <option>Bicicletas</option>
+      <option>Bicicletas</option> --}}
     </select>
 
-    <input type="submit" value="Confirmar" class="btn">
+    <input type="submit" value="Confirmar" class="btn menuImagem" style="margin-top: 1.5%;margin-left:36%;color:white;">
   </form>
-  <hr>
-{{-- </div> --}}
-{{-- <div> --}}
-  <form method="GET" action="{{url('imagens/procurar')}}" enctype="multipart/form-data"> 
+  
+  <hr style="margin-top:1.5%;">
+
+  <form method="GET" action="{{url('imagens/procurar')}}" enctype="multipart/form-data" style="margin-top: -2.5%;"> 
     @csrf
 <select class="form-control" name="tipo" id="tipo">
   <option>Identidade Visual</option>
@@ -42,12 +42,13 @@
   <option>Sinalética</option>
   <option>Texteis</option>
   <option>Bandeiras</option>
-  <option>Carros</option>
+  {{-- <option>Carros</option>
   <option>Motas</option>
   <option>Tratores</option>
-  <option>Bicicletas</option>
+  <option>Bicicletas</option> --}}
 </select>
-<input type="submit" value="Procurar" class="btn">
+<input type="submit" value="Procurar" class="btn menuImagem" style="margin-top: 2%;color:white;margin-left:25%;">
+<a class="btn menuImagem" style="margin-top: 2%;color:white;" onClick="window.location.href='/imagens/'">Resetar</a>
 </form>
 </div>
 </div>
@@ -72,8 +73,10 @@
     <form action="/imagens/estado/{{$item->id}}" method="POST" style="right: 1%;top:1%;position: absolute;">
       @csrf
       @if ($item->estado =='visivel')
+      <span class="btn" style="background-color: #2e2e2d;color: white;cursor:default;">{{$item->tipo}}</span>
       <button type="submit" class="btn tabelaMarcasEstado" value="{{$item->estado}}"><i class="fas fa-eye"></i></button>
       @else
+      <span class="btn" style="background-color: #2e2e2d;color: white;cursor:default;">{{$item->tipo}}</span>
       <button type="submit" class="btn tabelaMarcasEstado" value="{{$item->estado}}"><i class="fas fa-eye-slash"></i></button>
       @endif
     </form>

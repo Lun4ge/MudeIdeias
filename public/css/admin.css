@@ -1,4 +1,55 @@
 
+.resposta {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  background-color: white;
+  overflow-x: hidden;
+  padding-top: 60px;
+  transition: 0.5s;
+}
+
+.btnresponder{
+  padding-left: 7%;
+  padding-right: 7%;
+  padding-top: 5%;
+  padding-bottom: 5%;
+  border:none;
+  background-color: #c0d80f;
+  color: #757573;
+}
+
+#logo{
+  margin-top: 2%;
+  margin-left: 4%;
+}
+
+.btnresponder:hover{
+  background-color: #9bad0c;
+  color: white;
+}
+
+.mensagemClick{
+ padding-top: 2%;
+ padding-bottom: 2%;
+ width: 100%;
+ background-color: #2e2e2d;
+ color: white;
+}
+
+.mensagemClick:hover
+{
+ background-color: #4f4f4d;
+}
+
+.infoboxes
+{
+  border-radius: 5px;
+}
+
 div.menu{
   width:200px;
 }
@@ -49,6 +100,15 @@ div.menu a{
   white-space:nowrap
 }
 
+.menuImagem{
+  background-color: #2e2e2d;
+  color: white;
+}
+
+.menuImagem:hover{
+  background-color: #696969;
+}
+
 .ButtonMenu:hover{
 color: #757573;
 }
@@ -78,10 +138,14 @@ color: #757573;
   color: white;
 }
 
+.tabelaMarcasEstado:hover{
+  color: #c0d80f;
+}
+
 .tabelaMarcasDelete{
   background-color: #2e2e2d;
   color: white;
-  padding: -5%;
+  /* padding: -5%; */
  }
 
 .tabelaMarcasDelete:hover{
@@ -123,8 +187,8 @@ color: #c9c9c9;
 }
 
 .confirmButton:hover{
-  background-color: #303030;
-  color: #c9c9c9;
+  background-color: #696969;
+  color: #c0d80f;
 }
 
 #AdicionarMarca{

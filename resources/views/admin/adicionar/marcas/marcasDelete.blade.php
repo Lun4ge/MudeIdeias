@@ -40,16 +40,19 @@
     </table>
     <br>
     <table class="table">
-      <thead class="tabelaMarcasTop" style="text-align:center;"><tr><th scope="col" colspan="3">Editar Marca</th></tr></thead>
+      <thead class="tabelaMarcasTop" style="text-align:center;"><tr><th scope="col" colspan="3">Eliminar Marca</th></tr></thead>
             <tbody class="tabelaMarcasBottom">
-            <form method="POST" action="/marcas/{{$only->id}}/edit" enctype="multipart/form-data"> 
+            <form action="/marcas/{{$only->id}}" method="POST">
               @csrf
-              <th scope="row"><input type="text" class="form-control" id="nome" name="nome" placeholder="Nome da Marca" value="{{$only->nome}}"></th>
-              <th><input type="submit" value="Editar" class="btn confirmButton" style="width: 100%"></th></form>
+              @method('delete')
+              <th scope="row">
+                <h4 style="text-align: center;"> Pretende mesmo eliminar {{$only->nome}} ?</h4><br>
+                <button type="submit" class="btn confirmButton" style="padding-left:15%;padding-right:15%;margin-left:15%;"><i class="far fa-check-circle"></i></button>
+                <button class="btn confirmButton" style="padding-left:15%;padding-right:15%;" onClick="window.location.href='/marcas';return false;"><i class="fas fa-ban"></i></button>
+            </th></form>
             </form>
             </tbody>
     </table>
-
   </div>
       </div>
 @endsection
