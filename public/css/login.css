@@ -3,11 +3,16 @@
   margin-left: 4%;
 }
 .margem{
-  margin-left: 75%;
+  margin-left: 73%;
 }
 .margem2{
   margin-left: 35%;
 }
 button{
   width: 15%;
+}
+#pass{
+  color:#555555; 
+  float: right;
+  margin-right: 16%;
 }

@@ -21,10 +21,10 @@
 <body>
     <div id="menuMais">
         <br><br><br><br>
-        <a href="/quemsomos" style="text-decoration:none">QUEM SOMOS</a><br><br>
-        <a href="/oquefazemos" style="text-decoration:none">O QUE FAZEMOS</a><br><br>
-        <a href="/contacto" style="text-decoration:none">CONTACTO</a><br><br>
-        <a href="/ondeEstamos" style="text-decoration:none">ONDE ESTAMOS</a>
+        <a href="/quemsomos" style="text-decoration:none"  onmouseover="this.style.color='#c0d80f'" onmouseout="this.style.color='black'">QUEM SOMOS</a><br><br>
+        <a href="/oquefazemos" style="text-decoration:none"  onmouseover="this.style.color='#c0d80f'" onmouseout="this.style.color='black'">O QUE FAZEMOS</a><br><br>
+        <a href="/contacto" style="text-decoration:none"  onmouseover="this.style.color='#c0d80f'" onmouseout="this.style.color='black'">CONTACTO</a><br><br>
+        <a href="/ondeEstamos" style="text-decoration:none"  onmouseover="this.style.color='#c0d80f'" onmouseout="this.style.color='black'">ONDE ESTAMOS</a>
         <br><br><br><br>
         <img src="images/redesSociais.png" class="redes" alt="redes sociais"> <br><br><br>
         <img src="images/20anos.png" class="anos" alt="20 anos">

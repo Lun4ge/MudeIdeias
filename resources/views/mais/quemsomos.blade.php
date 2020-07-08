@@ -17,7 +17,7 @@
       <div class="container-fluid; margem">
         <div class="row">
           <div class="col-md-8">
-            <p id="texto">
+            <p style="font-size: 0.90vw; margin-top: 9%">
               Nos nossos dias nenhuma empresa qualquer que seja o seu sector de actividade, pode descurar uma profunda <br> preocupação com a sua imagem, bem como a sua publicidade. <br><br>
               Hoje, só antecipando-se à progressiva evolução dos padrões de exigência a níveis de desempenho e <br> fiabilidade, é possível inspirar cada vez mais confiança aos seus clientes. <br>
               O seu produto ou serviço deve despertar as associações correctas, informando e impulsionando a compra, visita <br> ou a sua divulgação. <br><br>

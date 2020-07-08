@@ -1,6 +1,7 @@
 .margem {
   margin-left: 15%;
 }
+
 .linha {
   border-left: 1px solid #c0d80f;
   height: 650px;
@@ -11,62 +12,59 @@
   height: 8%;
   width: 8%;
 }
-label{
-  color: white;
-  background: #c0d80f;
-  padding: 0.5%;
-  border-radius: 6%;
-}
-.margem2{
-  margin-left: 22%;
-}
-.margem3{
-  margin-left: 25%;
-}
-.margem4{
-  margin-left: 21.3%;
-}
-.margem5{
-  margin-left: 25.4%;
-}
-.margem6{
-  margin-left: 21.4%;
-}
 hr{
   margin: 50%;
 }
-.tamanhoInput1 {
-  width: 63.7%; 
-  height: 7%;
+#texto{
+  font-size: 0.80vw;
+  margin-left: 25%;
+}
+#ajudar{
+  font-size: 1.4vw;
+  margin-left: 22%;
+}
+.nome{
+  font-size: 0.90vw;
+  margin-left: 22%;
+}
+.email{
+  font-size: 0.90vw;
+  margin-left: 22%;
+}
+.titulo{
+  font-size: 0.90vw;
+  margin-left: 22%;
+}
+.mensagem{
+  font-size: 0.90vw;
+  margin-left: 22%;
+}
+.inputNome{
   border: 1px solid lightgray;
   border-radius: 1%;
   box-sizing: border-box;
   margin-left: -1%;
+  width: 45.4%;
 }
-.tamanhoInput2 {
-  width: 60.9%; 
-  height: 10%;
+.inputEmail{
   border: 1px solid lightgray;
   border-radius: 1%;
   box-sizing: border-box;
   margin-left: -1%;
+  width: 45.2%;
 }
-.tamanhoInput3 {
-  width: 63.8%;
-  height: 7%;
-  border: 1px solid lightgray;
-  border-radius: 1%;
-  box-sizing: border-box;
-}
-.tamanhoInput4 {
-  width: 60.3%;
+.inputTitulo{
   border: 1px solid lightgray;
   border-radius: 1%;
   box-sizing: border-box;
   margin-left: -1%;
+  width: 45.2%;
 }
-.vertical{
-  vertical-align: top;
+.inputMensagem{
+  border: 1px solid lightgray;
+  border-radius: 1%;
+  box-sizing: border-box;
+  margin-left: -1%;
 }
 .botao{
   margin-left: 66.4%;
@@ -77,30 +75,5 @@ hr{
   border: 1px solid;
   border-radius: 4%;
   font-size: 0.83vw;
-}
-#texto{
-  font-size: 0.65vw;
-}
-#titulo{
-  font-size: 1.5vw;
-}
-#Nome{
-  font-size: 0.90vw;
-  margin-left: -5%;
-}
-#Email{
-  font-size: 0.90vw;
-}
-#tituloMensagem{
-  font-size: 0.90vw;
-  margin-left: -5.5%;
-}
-#Mensagem{
-  font-size: 0.90vw;
-  margin-left: -0.5%;
-}
-::placeholder {
-  color: white;
-  background: #c0d80f;
 }
 html { font-size: 1vw; }

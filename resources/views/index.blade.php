@@ -12,15 +12,15 @@
     <nav class="navbar navbar-expand-lg navbar-light">
       <div class="container">
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav mr-auto">
+          <ul class="navbar-nav mr-auto" >
             <img src="{{asset('images/logo.png')}}" alt="logo" height="60"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <img src="{{asset('images/20anos.png')}}" class="imagem" alt="20anos" height="25">
           </ul>
         </div>
         <ul class="navbar-nav ml-auto">
             <div class="row">
-                <div class="col-sm-10">
-                    <h6><br>(+351) 91 406 94 72 | (+351) 243 581 581 | geral@mudedideias.com <br> <font style="color:#c0d80f">Soluções para publicidade!</font></h6>
+                <div class="col-sm-8" style="margin-left: -2%">
+                    <h6><br><br>(+351) 91 406 94 72 | (+351) 243 581 581 | geral@mudedideias.com <br> <font style="color:#c0d80f">Soluções para publicidade!</font></h6>
                 </div>
                 <div class="col-sm-2">
                     <div class="w3-dropdown-hover">
@@ -34,6 +34,9 @@
                         </div>
                     </div>
                 </div>
+                <div class="col-sm-1" style="margin-left: -3%">
+                  <a href="/register"><img src="{{asset('images/register.png')}}" alt="register" height="60%" style="margin-top: 30%"></a>
+                </div>
             </div>
           </ul>
       </div>
@@ -43,156 +46,75 @@
     <div class="row">
       <div class="col-sm 2"></div>
       <div class="col-md 1">
-        <a href="/"><img src="{{asset('images/identidadeVisual.png')}}" id="primeiro" class="tamanho" alt="identidadeVisual">
+        <span class="circle">
+          <a href="/"><img src="{{asset('images/identidadeVisual.png')}}" alt="identidadeVisual">
+        </span>
       </div>
       <div class="col-sm 1">
-        <a href="/portfolio/viaturas"><img src="{{asset('images/viaturas.png')}}" id="segundo" class="tamanho" alt="viaturas"></a>
+        <span class="circle">
+          <a href="/portfolio/viaturas"><img src="{{asset('images/viaturas.png')}}" style="margin-top: 15%; margin-left: 17%" alt="viaturas"></a>
+        </span>
       </div>
       <div class="col-sm 1">
-        <a href="/portfolio/montras"><img src="{{asset('images/montras.png')}}" id="terceiro" class="tamanho" alt="montras"></a>
+        <span class="circle">
+          <a href="/portfolio/montras"><img src="{{asset('images/montras.png')}}" alt="montras"></a>
+        </span>
       </div>
       <div class="col-sm 1">
-        <a href="/portfolio/lonas"><img src="{{asset('images/lonas.png')}}" id="quarto" class="tamanho" alt="lonas"></a>
+        <span class="circle">
+          <a href="/portfolio/lonas"><img src="{{asset('images/lonas.png')}}" alt="lonas"></a>
+        </span>
       </div>
       <div class="col-sm 1">
-        <a href="/portfolio/placas"><img src="{{asset('images/placasReclamos.png')}}" id="quinto" class="tamanho" alt="placasReclamos"></a>
+        <span class="circle">
+          <a href="/portfolio/placas"><img src="{{asset('images/placasReclamos.png')}}" alt="placasReclamos"></a>
+        </span>
       </div>
       <div class="col-sm 1">
-        <a href="/portfolio/sinaletica"><img src="{{asset('images/sinaletica.png')}}" id="sexto"class="tamanho" alt="montras"></a>
+        <span class="circle">
+          <a href="/portfolio/sinaletica"><img src="{{asset('images/sinaletica.png')}}" alt="montras"></a>
+        </span>
       </div>
       <div class="col-sm 1">
-        <a href="/portfolio/texteis"><img src="{{asset('images/texteis.png')}}" id="setimo" class="tamanho" alt="texteisis"></a>
+        <span class="circle">
+          <a href="/portfolio/texteis"><img src="{{asset('images/texteis.png')}}" alt="texteisis"></a>
+        </span>
       </div>
       <div class="col-sm 1">
-        <a href="/portfolio/bandeiras"><img src="{{asset('images/bandeiras.png')}}" id="oitavo" class="tamanho" alt="bandeiras"></a>
+        <span class="circle">
+          <a href="/portfolio/bandeiras"><img src="{{asset('images/bandeiras.png')}}" alt="bandeiras"></a>
+        </span>
       </div>
       <div class="col-sm 2"></div>
     </div>
-    {{-----------------------------------------------------------------------------------------------------------------------}}
-    <div id="one">
-      <a href="/"><img src="{{asset('images/circuloCinza.png')}}" id="img1"></a>
-    </div>
-    <script>
-      primeiro.onmouseover = function () {
-        one.classList.toggle('show');
-      }
-      primeiro.onmouseout = function () {
-        one.classList.toggle('show');
-      }
-    </script>
-    {{-----------------------------------------------------------------------------------------------------------------------}}
-    <div id="two">
-      <a href="/portfolio/viaturas"><img src="{{asset('images/circuloCinza.png')}}" id="img2"></a>
-    </div>
-    <script>
-      segundo.onmouseover = function () {
-        two.classList.toggle('show');
-      }
-      segundo.onmouseout = function () {
-        two.classList.toggle('show');
-      }
-    </script>
-    {{-----------------------------------------------------------------------------------------------------------------------}}
-    <div id="three">
-      <a href="/portfolio/montras"><img src="{{asset('images/circuloCinza.png')}}" id="img3"></a>
-    </div>
-    <script>
-      terceiro.onmouseover = function () {
-        three.classList.toggle('show');
-      }
-      terceiro.onmouseout = function () {
-        three.classList.toggle('show');
-      }
-    </script>
-    {{-----------------------------------------------------------------------------------------------------------------------}}
-    <div id="four">
-      <a href="/portfolio/lonas"><img src="{{asset('images/circuloCinza.png')}}" id="img4"></a>
-    </div>
-    <script>
-      quarto.onmouseover = function () {
-        four.classList.toggle('show');
-      }
-      quarto.onmouseout = function () {
-        four.classList.toggle('show');
-      }
-    </script>
-    {{-----------------------------------------------------------------------------------------------------------------------}}
-    <div id="five">
-      <a href="/portfolio/placas"><img src="{{asset('images/circuloCinza.png')}}" id="img5"></a>
-    </div>
-    <script>
-      quinto.onmouseover = function () {
-        five.classList.toggle('show');
-      }
-      quinto.onmouseout = function () {
-        five.classList.toggle('show');
-      }
-    </script>
-    {{-----------------------------------------------------------------------------------------------------------------------}}
-    <div id="six">
-      <a href="/portfolio/sinaletica"><img src="{{asset('images/circuloCinza.png')}}" id="img6"></a>
-    </div>
-    <script>
-      sexto.onmouseover = function () {
-        six.classList.toggle('show');
-      }
-      sexto.onmouseout = function () {
-        six.classList.toggle('show');
-      }
-    </script>
-    {{-----------------------------------------------------------------------------------------------------------------------}}
-    <div id="seven">
-      <a href="/portfolio/texteis"><img src="{{asset('images/circuloCinza.png')}}" id="img7"></a>
-    </div>
-    <script>
-      setimo.onmouseover = function () {
-        seven.classList.toggle('show');
-      }
-      setimo.onmouseout = function () {
-        seven.classList.toggle('show');
-      }
-    </script>
-    {{-----------------------------------------------------------------------------------------------------------------------}}
-    <div id="eight">
-      <a href="/portfolio/bandeiras"><img src="{{asset('images/circuloCinza.png')}}" id="img8"></a>
-    </div>
-    <script>
-      oitavo.onmouseover = function () {
-        eight.classList.toggle('show');
-      }
-      oitavo.onmouseout = function () {
-        eight.classList.toggle('show');
-      }
-    </script>
-    {{-----------------------------------------------------------------------------------------------------------------------}}
     <br>
-    <div class="row">
+    <div class="row" style="margin-left: 0.3%; margin-top: 1%">
       <div class="col-sm 2"></div>
-      <div class="col-md 1">
+      <div class="col-md 1" style="margin-left: 1%">
         <h6>IDENTIDADE VISUAL</h6>
       </div>
-      <div class="col-sm 1">
+      <div class="col-sm 1" style="margin-left: 0.3%">
         <h6>VIATURAS</h6>
       </div>
-      <div class="col-sm 1">
+      <div class="col-sm 1" style="margin-left: 0.4%">
         <h6>MONTRAS</h6>
       </div>
-      <div class="col-sm 1">
+      <div class="col-sm 1" style="margin-left: 0.4%">
         <h6>LONAS/EXPOSITORES</h6>
       </div>
-      <div class="col-sm 1">
+      <div class="col-sm 1" style="margin-left: 0.5%">
         <h6>PLACAS/RECLAMOS</h6>
       </div>
-      <div class="col-sm 1">
+      <div class="col-sm 1" style="margin-left: 0.5%">
         <h6>SINALÉTICA</h6>
       </div>
-      <div class="col-sm 1">
+      <div class="col-sm 1"style="margin-left: 0.3%">
         <h6>TEXTEIS</h6>
       </div>
-      <div class="col-sm 1">
+      <div class="col-sm 1" style="margin-left: 0.3%">
         <h6>BANDEIRAS</h6>
       </div>
-      <div class="col-sm 2"></div>
+      <div class="col-sm 1"></div>
     </div> 
     <br><br>
     <div class="div">
@@ -209,7 +131,6 @@
           </div>
         </div>
       @endforeach
-      
       <br>
     </div>
     <br><br>
