@@ -30,6 +30,13 @@
           <th>
                 <input type="text" value=" Titulo : {{$item->titulo}}" style="width:90%;margin-bottom:1%;margin-top:1%;margin-left:5%;font-weight:normal;" class="infoboxes" disabled><br>
                 <textarea style="width: 90%;margin-bottom:1%;margin-left:5%;font-weight:normal;" cols="180" rows="10" disabled class="infoboxes"> Mensagem : {{$item->mensagem}}</textarea>
+
+                <form action="/mensagens/{{$item->id}}" method="POST">
+                  @csrf
+                  @method('delete')
+                  <button class="btndeleteMensagem" type="submit" onclick="">Eliminar</button>
+                </form>
+
           </th>
           </tr>
           @endforeach

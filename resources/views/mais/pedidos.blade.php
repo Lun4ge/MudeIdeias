@@ -15,10 +15,26 @@
 <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
     
 
-@if($errors->any())
+@if(\Session::has('success'))
 <div class="alert" style="position: fixed;margin-left:45%;margin-right:5%;">
   <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
-  <strong>{{$errors->first()}}</strong> 
+  <strong>Pedido Enviado</strong> 
+</div>
+@endif
+
+@if($errors->has('tituloMensagem'))
+<div class="alert" style="position: fixed;margin-left:45%;margin-right:5%;">
+  <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
+  <strong>O Pedido não foi Enviado,
+<br>por favor preencha o Titulo</strong> 
+</div>
+    @endif
+
+    @if($errors->has('Mensagem'))
+<div class="alert" style="position: fixed;margin-left:45%;margin-right:5%;">
+  <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
+  <strong>O Pedido não foi Enviado,
+    <br>por favor preencha a Mensagem</strong> 
 </div>
     @endif
 

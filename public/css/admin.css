@@ -253,3 +253,18 @@ color: #c9c9c9;
   color: white;
 }
 
+.btndeleteMensagem{
+  width: 80%;
+  border:none;
+  margin-left:10%;
+  padding-top:1%;
+  padding-bottom:1%;
+  background-color:#2e2e2d;
+  color: #c0d80f;
+  outline:none;
+}
+
+.btndeleteMensagem:hover{
+  color: #303030;
+  background-color: #8a9c09;
+}

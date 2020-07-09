@@ -167,7 +167,7 @@ class backOffice extends Controller
         if($check == 0){
             $pedidos->save();
         }
-        return back()->withErrors(['Pedido Enviado']);
+        return back()->with('success', 'Pedido Enviado');   
     }
 
     public function PedidoDestroy($id)
@@ -348,7 +348,7 @@ class backOffice extends Controller
 
             $contacto->save();
             // return back();
-            return back()->withErrors(['Mensagem Enviada']);
+            return back()->with('success', 'Mensagem Enviada');  
         }
     
         public function MensagemDestroy($id)

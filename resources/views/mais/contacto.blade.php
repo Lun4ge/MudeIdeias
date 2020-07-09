@@ -14,12 +14,46 @@
   </head>
   <body>
 
-    @if($errors->any())
-<div class="alert" style="position: fixed;margin-left:45%;margin-right:5%;">
-  <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
-  <strong>{{$errors->first()}}</strong> 
-</div>
+    @if(\Session::has('success'))
+    <div class="alert" style="position: fixed;margin-left:45%;margin-right:5%;">
+      <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
+      <strong>Mensagem Enviada</strong> 
+    </div>
     @endif
+    
+    @if($errors->has('tituloMensagem'))
+    <div class="alert" style="position: fixed;margin-left:45%;margin-right:5%;">
+      <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
+      <strong>A Mensagem não foi Enviada,
+    <br>por favor preencha o Titulo</strong> 
+    </div>
+        @endif
+    
+        @if($errors->has('Mensagem'))
+    <div class="alert" style="position: fixed;margin-left:45%;margin-right:5%;">
+      <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
+      <strong>A Mensagem não foi Enviada,
+        <br>por favor preencha a Mensagem</strong> 
+    </div>
+        @endif
+
+        @if($errors->has('Nome'))
+        <div class="alert" style="position: fixed;margin-left:45%;margin-right:5%;">
+          <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
+          <strong>A Mensagem não foi Enviada,
+            <br>por favor preencha o Nome</strong> 
+        </div>
+            @endif
+
+            @guest
+            @if($errors->has('Email'))
+            <div class="alert" style="position: fixed;margin-left:45%;margin-right:5%;">
+              <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
+              <strong>A Mensagem não foi Enviada,
+                <br>por favor preencha o Email</strong> 
+            </div>
+                @endif
+            @endguest
 
     <a href="/"><img src="images/logo.png" class="imagem" alt="logo" id="logo"></a>
     <section>
