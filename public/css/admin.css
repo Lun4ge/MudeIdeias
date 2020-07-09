@@ -1,15 +1,19 @@
 
-.resposta {
-  height: 100%;
-  width: 0;
+#resposta {
+  height: 60%;
+  width: 20%;
   position: fixed;
   z-index: 1;
-  top: 0;
+  bottom: 0;
   right: 0;
   background-color: white;
-  overflow-x: hidden;
-  padding-top: 60px;
+  overflow-y: hidden;
+  /* overflow-x: hidden; */
   transition: 0.5s;
+  /* margin-top: 2%; */
+  margin-top: 10%;
+  margin-right: 5%;
+  background-color: #636363;
 }
 
 .btnresponder{
@@ -196,9 +200,6 @@ color: #c9c9c9;
 }
 
 .sizeImagens{
- /* height: 250px; */
-  /* width: 450px;  */
-  /* display: block; */
   height: 100%;
   width: 100%;
 }
@@ -221,3 +222,34 @@ color: #c9c9c9;
   margin-left: auto;
   margin-right: auto;
 }
+
+.btnEnviar{
+  background-color: #c0d80f;
+  color: #636363;
+  border: none;
+  padding-left: 5%;
+  padding-right: 5%;
+  padding-bottom: 2%;
+  padding-top: 2%;
+}
+
+.btnEnviar:hover{
+  background-color: #8a9c09;
+  color: white;
+}
+
+.btnCancelar{
+  background-color: #ff4242;
+  color: #636363;
+  border: none;
+  padding-left: 5%;
+  padding-right: 5%;
+  padding-bottom: 2%;
+  padding-top: 2%;
+}
+
+.btnCancelar:hover{
+  background-color: red;
+  color: white;
+}
+

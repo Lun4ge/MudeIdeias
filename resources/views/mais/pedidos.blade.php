@@ -8,11 +8,20 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <link rel="stylesheet" href="{{asset('css/pedidoOrcamentos.css')}}">
+    <link href="{{asset('images/admin/logo.png')}}" rel="icon">
     <script src="https://kit.fontawesome.com/397dd051b1.js" crossorigin="anonymous"></script>
 
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet"/>
 <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
     
+
+@if($errors->any())
+<div class="alert" style="position: fixed;margin-left:45%;margin-right:5%;">
+  <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
+  <strong>{{$errors->first()}}</strong> 
+</div>
+    @endif
+
     <title>Pedido de Orçamentos</title>
   </head>
   <body>

@@ -1,6 +1,11 @@
 @extends('admin.indexadmin')
 @section('conteudo')
 
+<script>
+function closeForm() {
+  document.getElementById("resposta").style.height = "0%";} 
+</script>
+
 <br>
 <div class="row">
 <div class="col-2"></div>
@@ -70,14 +75,19 @@
     <div class="col-2"></div>
   </div>
 
-  <div style="position:fixed;">
-<form method="POST" action="/enviados/{{$only->id}}/criar" enctype="multipart/form-data">
+  <div id="resposta">
+<form method="POST" action="/enviados/{{$only->id}}/criar" enctype="multipart/form-data" style="margin-left:8%;margin-right:8%;margin-top:8%;">
     @csrf
-    <input type="text" name="titulo" id="titulo"><br>
-    <textarea name="mensagem" id="mensagem" cols="30" rows="10"></textarea><br>
-    <input type="text" name="preco" id="preco"><br>
-    <input type="file" name="ficheiro[]" id="ficheiro" multiple>
-    <input type="submit" value="Introduzir">
+    <input type="text" name="titulo" id="titulo" placeholder="Titulo" style="width: 100%;margin-bottom:2%;"><br>
+    <textarea name="mensagem" id="mensagem" cols="30" rows="10" placeholder="Mensagem" style="width: 100%;margin-bottom:2%;"></textarea><br>
+    <input type="text" name="preco" id="preco" placeholder="Preço" style="width: 100%;margin-bottom:2%;"><br>
+    <input type="file" name="ficheiro[]" id="ficheiro" multiple> <br>
+    
+    <div style="margin-top: 8%;margin-left:25%;">
+    <input type="submit" value="Introduzir" class="btnEnviar">
+    <button type="button" class="btnCancelar" onclick="return closeForm();"><i class="fas fa-times-circle"></i></button>
+  </div>
+
 </form> 
   </div>
 @endsection

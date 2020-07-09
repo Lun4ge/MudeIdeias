@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="{{asset('css/index.css')}}">
+    <link href="{{asset('images/admin/logo.png')}}" rel="icon">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <title>Mudedideias</title>
   </head>
@@ -35,7 +36,15 @@
                     </div>
                 </div>
                 <div class="col-sm-1" style="margin-left: -3%">
-                  <a href="/register"><img src="{{asset('images/register.png')}}" alt="register" height="60%" style="margin-top: 30%"></a>
+                  @guest
+                  <div class="w3-dropdown-hover">
+                    <button class="w3-button w3-white"><img src="{{asset('images/register.png')}}" alt="mais" height="60"></button>
+                    <div class="w3-dropdown-content w3-bar-block">
+                        <a href="/login" class="w3-bar-item w3-button" style="text-decoration:none">ENTRAR</a>
+                        <a href="/register" class="w3-bar-item w3-button" style="text-decoration:none">REGISTAR-SE</a>
+                    </div>
+                </div>
+                  @endguest
                 </div>
             </div>
           </ul>
@@ -43,80 +52,120 @@
     </div>
     </nav>
     <img src="{{asset('images/inicial.jpg')}}" alt="incio" width="100%" height="auto">
-    <div class="row">
+    <div class="row" style="margin-bottom:10%;">
       <div class="col-sm 2"></div>
       <div class="col-md 1">
+        <a href="/">
         <span class="circle">
-          <a href="/"><img src="{{asset('images/identidadeVisual.png')}}" alt="identidadeVisual">
-        </span>
+          <img src="{{asset('images/identidadeVisual.png')}}" alt="identidadeVisual">
+        </span></a>
+        <br>
+        <div style="color: grey;font-weight: bold;position: absolute;top: 50%;left: 18%;margin-top:95%;">
+          IDENTIDADE VISUAL
+        </div>
       </div>
       <div class="col-sm 1">
+        <a href="/portfolio/viaturas">
         <span class="circle">
-          <a href="/portfolio/viaturas"><img src="{{asset('images/viaturas.png')}}" style="margin-top: 15%; margin-left: 17%" alt="viaturas"></a>
-        </span>
+          <img src="{{asset('images/viaturas.png')}}" alt="viaturas">
+        </span></a>
+        <br>
+        <div style="color: grey;font-weight: bold;position: absolute;top: 50%;left: 36%;margin-top:95%;">
+          VIATURAS
+        </div>
       </div>
       <div class="col-sm 1">
+        <a href="/portfolio/montras">
         <span class="circle">
-          <a href="/portfolio/montras"><img src="{{asset('images/montras.png')}}" alt="montras"></a>
-        </span>
+          <img src="{{asset('images/montras.png')}}" alt="montras">
+        </span></a>
+        <br>
+        <div style="color: grey;font-weight: bold;position: absolute;top: 50%;left: 35%;margin-top:95%;">
+          MONTRAS
+        </div>
       </div>
       <div class="col-sm 1">
+        <a href="/portfolio/lonas">
         <span class="circle">
-          <a href="/portfolio/lonas"><img src="{{asset('images/lonas.png')}}" alt="lonas"></a>
-        </span>
+          <img src="{{asset('images/lonas.png')}}" alt="lonas">
+        </span></a>
+        <br>
+        <div style="color: grey;font-weight: bold;position: absolute;top: 50%;left: 18%;margin-top:95%;">
+          LONAS/EXPOSITORES
+        </div>
       </div>
       <div class="col-sm 1">
+        <a href="/portfolio/placas">
         <span class="circle">
-          <a href="/portfolio/placas"><img src="{{asset('images/placasReclamos.png')}}" alt="placasReclamos"></a>
-        </span>
+          <img src="{{asset('images/placasReclamos.png')}}" alt="placasReclamos">
+        </span></a>
+        <br>
+        <div style="color: grey;font-weight: bold;position: absolute;top: 50%;left: 18%;margin-top:95%;">
+          PLACAS/RECLAMOS
+        </div>
       </div>
       <div class="col-sm 1">
+        <a href="/portfolio/sinaletica">
         <span class="circle">
-          <a href="/portfolio/sinaletica"><img src="{{asset('images/sinaletica.png')}}" alt="montras"></a>
-        </span>
+          <img src="{{asset('images/sinaletica.png')}}" alt="montras">
+        </span></a>
+        <br>
+        <div style="color: grey;font-weight: bold;position: absolute;top: 50%;left: 33%;margin-top:95%;">
+          SINALÉTICA
+        </div>
       </div>
       <div class="col-sm 1">
+        <a href="/portfolio/texteis">
         <span class="circle">
-          <a href="/portfolio/texteis"><img src="{{asset('images/texteis.png')}}" alt="texteisis"></a>
-        </span>
+          <img src="{{asset('images/texteis.png')}}" alt="texteisis">
+        </span></a>
+        <br>
+        <div style="color: grey;font-weight: bold;position: absolute;top: 50%;left: 41%;margin-top:95%;">
+          TEXTEIS
+        </div>
       </div>
       <div class="col-sm 1">
+        <a href="/portfolio/bandeiras">
         <span class="circle">
-          <a href="/portfolio/bandeiras"><img src="{{asset('images/bandeiras.png')}}" alt="bandeiras"></a>
-        </span>
+          <img src="{{asset('images/bandeiras.png')}}" alt="bandeiras">
+        </span></a>
+        <br>
+        <div style="color: grey;font-weight: bold;position: absolute;top: 50%;left: 35%;margin-top:95%;">
+          BANDEIRAS
+        </div>
       </div>
       <div class="col-sm 2"></div>
     </div>
-    <br>
-    <div class="row" style="margin-left: 0.3%; margin-top: 1%">
+    <br><br>
+    {{-- <div class="row" style="">
       <div class="col-sm 2"></div>
-      <div class="col-md 1" style="margin-left: 1%">
-        <h6>IDENTIDADE VISUAL</h6>
+      <div class="col-md 1" style="text-align:center;color: grey;font-weight: bold;">
+        IDENTIDADE VISUAL
       </div>
-      <div class="col-sm 1" style="margin-left: 0.3%">
-        <h6>VIATURAS</h6>
+      <div class="col-sm 1" style="text-align:center;color: grey;font-weight: bold;">
+        VIATURAS
       </div>
-      <div class="col-sm 1" style="margin-left: 0.4%">
-        <h6>MONTRAS</h6>
+      <div class="col-sm 1" style="text-align:center;color: grey;font-weight: bold;">
+        MONTRAS
       </div>
-      <div class="col-sm 1" style="margin-left: 0.4%">
-        <h6>LONAS/EXPOSITORES</h6>
+      <div class="col-sm 1" style="text-align:center;color: grey;font-weight: bold;">
+       LONAS/EXPOSITORES
       </div>
-      <div class="col-sm 1" style="margin-left: 0.5%">
-        <h6>PLACAS/RECLAMOS</h6>
+      <div class="col-sm 1" style="text-align:center;color: grey;font-weight: bold;">
+       PLACAS/RECLAMOS
       </div>
-      <div class="col-sm 1" style="margin-left: 0.5%">
-        <h6>SINALÉTICA</h6>
+      <div class="col-sm 1" style="text-align:center;color: grey;font-weight: bold;">
+        SINALÉTICA
       </div>
-      <div class="col-sm 1"style="margin-left: 0.3%">
-        <h6>TEXTEIS</h6>
+      <div class="col-sm 1" style="text-align:center;color: grey;font-weight: bold;">
+       TEXTEIS
       </div>
-      <div class="col-sm 1" style="margin-left: 0.3%">
-        <h6>BANDEIRAS</h6>
+      <div class="col-sm 1" style="text-align:center;color: grey;font-weight: bold;">
+        BANDEIRAS
       </div>
       <div class="col-sm 1"></div>
     </div> 
-    <br><br>
+    <br><br> --}}
     <div class="div">
       @foreach ($all as $item)
         <img src="{{asset('/portfolio/'.$item->imagem)}}" alt="imagem" class="sizeImagem" style="position: relative;" onclick="document.getElementById('id{{$item->id}}').style.display='block'">
@@ -124,7 +173,6 @@
         <div id="id{{$item->id}}" class="w3-modal">
           <div class="w3-modal-content" id="assetmargemZoom">
             <span onclick="document.getElementById('id{{$item->id}}').style.display='none'" class="w3-button w3-display-topright">&times;</span>
-
             <div>
               <img src="{{asset('/portfolio/'.$item->imagem)}}" alt="imagem" id="imageZoom">
             </div>

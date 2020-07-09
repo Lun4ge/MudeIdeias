@@ -167,7 +167,7 @@ class backOffice extends Controller
         if($check == 0){
             $pedidos->save();
         }
-        return back();
+        return back()->withErrors(['Pedido Enviado']);
     }
 
     public function PedidoDestroy($id)
@@ -342,11 +342,13 @@ class backOffice extends Controller
             $contacto->nome=$data['Nome'];
             $contacto->titulo=$data['tituloMensagem'];
             $contacto->mensagem=$data['Mensagem'];
+
             if(Auth::check()){$contacto->email=auth()->user()->email;}
             else{$contacto->email=$data['Email'];}
 
             $contacto->save();
-            return redirect('/contacto');
+            // return back();
+            return back()->withErrors(['Mensagem Enviada']);
         }
     
         public function MensagemDestroy($id)
